@@ -39,10 +39,12 @@
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#s1">Semaine 1</a></li>
                 <li><a href="#s2">Semaine 2</a></li>
+                <li class="divider"></li>
                 <li><a href="#s3">Semaine 3</a></li>
                 <li><a href="#s4">Semaine 4</a></li>
                 <li><a href="#s5">Semaine 5</a></li>
                 <li><a href="#s6">Semaine 6</a></li>
+                <li class="divider"></li>
                 <li><a href="#s7">Semaine 7</a></li>
                 <li><a href="#s8">Semaine 8</a></li>
                 <li class="divider"></li>
@@ -50,6 +52,7 @@
                 <li><a href="#s10">Semaine 10</a></li>
                 <li><a href="#s11">Semaine 11</a></li>
                 <li><a href="#s12">Semaine 12</a></li>
+                <li class="divider"></li>
                 <li><a href="#s13">Semaine 13</a></li>
                 <li><a href="#s14">Semaine 14 </a></li>
                 <li><a href="#s15">Semaine 15 </a></li>
@@ -95,7 +98,7 @@
 
       <div class="row">
         <div class="">
-            <h3 id="s1">Semaine 1 : reprise et révisions, librairie de support</h3>
+            <h3>Organisation du cours</h3>
             <div class="col-md-4 alert">
               <strong>Déroulement d'une semaine type</strong>
               <p>
@@ -113,20 +116,72 @@
                 L'ensemble du travail demandé doit être fait pendant la période.
               </p>
               <br/>
+
+            </div>
+            <div class="col-md-4 well">
               <strong>Installation à la maison</strong>
               <p>
                 À la maison, vous devez installer
-                <a target="_blank" class="btn btn-primary" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Dev Kit</a> et l'environnement de développement
-                <a target="_blank" class="btn btn-primary" href="https://www.jetbrains.com/idea/">Intellij IDEA</a>
+                <a target="_blank" class="btn btn-primary btn-xs" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Dev Kit</a> et l'environnement de développement
+                <a target="_blank" class="btn btn-primary btn-xs" href="https://www.jetbrains.com/idea/">Intellij IDEA</a>
+              </p>
+            </div>
+            <div class="col-md-4 alert ">
+              <strong>Votre propre application mobile</strong>
+              <p>
+                Vous devez développer votre propre application mobile au cours de la session.
+                Les 3 phases du projet porteront sur cette application.
+              </p>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="">
+            <h3 id="s1">Semaine 1 : Reprise et révisions, librairie de support</h3>
+            <div class="col-md-4 alert">
+              <strong>Avant la séance</strong>
+              <p>
+                Pensez à apporter votre ordinateur si vous voulez vérifier votre installation.
               </p>
             </div>
             <div class="col-md-4 alert  alert-warning">
               <strong>Pendant la séance en classe</strong>
-
+              <p>
+                Nous reviendrons sur la création d'un projet et d'activités.
+              </p>
+              <p>
+                Il y aura une capsule sur
+                <ul>
+                  <li>la différence entre AppcompatActivity et Activity</li>
+                  <li>les librairies de support et les noms de classe</li>
+                  <li>un exemple de Dialog en mode support</li>
+                </ul>
+                Exercices sur le mise en page avec LinearLayout
+              </p>
+              <p>
+                Vous trouverez quelques métaphores sur la différence entre service et
+                repository
+                <a href="http://stackoverflow.com/questions/1440096/difference-between-repository-and-service">ici</a>
+              </p>
             </div>
             <div class="col-md-4 alert alert-info">
               <strong>Pendant la séance en laboratoire</strong>
-
+              <p>
+                Vous devrez compléter les exercices.
+              </p>
+              <p>
+                Commencez votre projet en lui donnant le nom de votre application.
+                Choisissez un nom de package approprié pour votre application.
+                Commencez la mise en place d'un projet avec une activité contenant:
+                <ul>
+                  <li>menu avec 2 options qui déclenche un Toast</li>
+                  <li>utilisation de la classe AppcompatActivity</li>
+                  <li>utilisation de la classe AppcompatActivity</li>
+                </ul>
+              </p>
+              <p>
+                Créez un Android Virtual Device avec l'API 15 et testez votre application
+              </p>
             </div>
         </div>
       </div>
@@ -135,54 +190,50 @@
             <h3 id="s2" >Semaine 2 : Service et repository</h3>
             <div class="col-md-4 alert alert-success">
               <strong>Avant la séance (2h)</strong>
-              <br>Vous devez parcourir la page Wikipedia concernant
-              <a class="btn btn-xs btn-primary" target="_blank" href="https://fr.wikipedia.org/wiki/HTML">HTML</a> (max 20 minutes).
-              <br>Vous devez parcourir le site W3Schools (en anglais)
-              <a class="btn btn-xs btn-primary" target="_blank" href="http://www.w3schools.com">W3Schools</a> (max 20 minutes).
+              <p>
+                Vous devez parcourir la page Wikipedia concernant le Singleton
+                <a class="btn btn-xs btn-primary" target="_blank" href="">
+                  Singleton
+                </a> (max 20 minutes).
+              </p>
+              Service et repository VIDEO ????  OUI C IMPORTANT
 
-              <br>Vous devez regarder la video suivante:
-              <br><iframe width="200" height="150" src="https://www.youtube.com/embed/16WzfT4K_Kw?rel=0" frameborder="0" allowfullscreen></iframe>
-              Ensuite vous devez commencer les exercices à droite. Arrêtez vous quand vous avez complété vos 2 heures.
+              Singleton et threads demonstration de plusieurs ca d'usage de synchronized
             </div>
             <div class="col-md-4 alert  alert-warning">
-              <div>
-                <a class="btn btn-primary btn-xs" role="button" data-toggle="collapse" href="#s01e01" aria-expanded="false" aria-controls="collapseExample">
-                  exercice 1
-                </a>
-                <div class="collapse" id="s01e01">
-                  <div class="well">
-                    Le premier exercice consiste à reproduire la page qui est produite dans la video. Faite un fichier appelé simpsons.html
-                  </div>
-                </div>
-              </div>
-              <div>
-                <a class="btn btn-primary btn-xs" role="button" data-toggle="collapse" href="#s01e02" aria-expanded="false" aria-controls="collapseExample">
-                  exercice 2
-                </a>
-                <div class="collapse" id="s01e02">
-                  <div class="well">
-                    Vous devez créer une page que vous sauverez dans un fichier premierepage.html. Vous devez mettre votre nom comme titre de la page.
-                    Son contenu doit contenir au moins 3 titres de niveaux différents (h1 à h6) ainsi qu'une liste HTML numérotée et une liste html
-                    non numérotée.
-                  </div>
-                </div>
-              </div>
-              <div>
-                <a class="btn btn-primary btn-xs" role="button" data-toggle="collapse" href="#s01e03" aria-expanded="false" aria-controls="collapseExample">
-                  exercice 3
-                </a>
-                <div class="collapse" id="s01e03">
-                  <div class="well">
-                    Utilisez le <a target="_blank" href="https://html5.validator.nu">validateur HTML5</a> pour corriger les pages des exercices précédents.
-                  </div>
-                </div>
-              </div>
+              <strong>Pendant la séance en classe</strong>
+              <p>
+                Nous allons revenir par l'exemple sur la différence entre un service
+                et un repository. Nous reverrons également comment cela s'articule avec
+                le modèle de données. Le tout sera illustré sur un exemple d'application
+                qui sera suivi tout au long de la session.
 
+                FAIRE VIDEO SUR SERVICE REPOSITORY
+              </p>
+              <p>
+                Vous trouverez quelques métaphores sur la différence entre service et
+                repository
+                <a href="http://stackoverflow.com/questions/1440096/difference-between-repository-and-service">ici</a>
+              </p>
+              <p>
+                Vous commencerez les dessins de vos interfaces afin d'identifier les méthodes de service
+                nécessaires.
+              </p>
+              <p>
+                En partant des méthodes de service identifiées
+                Vous commencerez la définition de vos classes et modèle nécessaire pour votre service.
+              </p>
             </div>
             <div class="col-md-4 alert alert-info">
-              <strong>Pendant la séance</strong>
-              Introduction à HTML et à l'environnement de développement. Première page, première balises.
-              Les exercices à faire seront les suivants.
+              <strong>Pendant la séance en laboratoire</strong>
+              <p>
+                Vous devrez compléter les dessins de vos activités au niveau interface en prenant l'exemple fait
+                pendant la séance en classe.
+              </p>
+              <p>
+                Vous devrez compléter la définition et l'implantation de votre service,
+                de votre modèle et de votre repository.
+              </p>
             </div>
           </div>
         </div>
@@ -191,9 +242,10 @@
             <h3 id="s5">Semaine 3 : Fragment, activités et bus d'événements</h3>
             <div class="col-md-4 alert alert-success">
               <strong>Avant la séance (2h)</strong>
-              Lisez la page wikipedia pour vous familiariser <a href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" class="btn btn-primary btn-xs">ici</a>
-              <br/>Vous devez regarder et reproduire le résultat de la video suivante:
-              <br/><iframe width="200" height="150" src="https://www.youtube.com/embed/WicRqXx0pZY?rel=0" frameborder="0" allowfullscreen></iframe>
+              <p>
+                Lisez la page Android pour vous familiariser avec la notion de Fragment
+                <a href="" class="btn btn-primary btn-xs">ici</a>
+              </p>
             </div>
             <div class="col-md-4 alert alert-warning">
               <strong>Pendant la séance en classe</strong>
@@ -211,22 +263,24 @@
             <div class="col-md-4 alert alert-success">
               <strong>Avant la séance (2h)</strong>
               <p>
-
+                Regardez l'exemple et en enlevant des morceaux de code, identifiez quels
+                sont les éléments essentiels au bon fonctionnement.
               </p>
               <p>
-
+                VIDEO?
               </p>
             </div>
             <div class="col-md-4 alert alert-warning">
               <strong>Pendant la séance en classe</strong>
               <p>
-
+                Démonstration de création étape par étape d'une interface adaptive.
               </p>
             </div>
             <div class="col-md-4 alert alert-info">
               <strong>Pendant la séance de laboratoire</strong>
               <p>
-
+                Vous devrez compléter la programmation de votre activité qui gère
+                des interfaces différentes en portrait / paysage.
               </p>
             </div>
           </div>
@@ -237,15 +291,58 @@
             <h3 id="s5">Semaine 5 : navigation, drawer et navigation latérale</h3>
             <div class="col-md-4 alert alert-success">
               <strong>Avant la séance (2h)</strong>
-              <br/><iframe width="200" height="150" src="https://www.youtube.com/embed/16WzfT4K_Kw?rel=0" frameborder="0" allowfullscreen></iframe>
+              <p>
+                VIDEO ou exemple
+              </p>
+              <p>
+                Essayez d'appliquer les étapes suivantes sur une activité existante
+              </p>
+              <ul>
+                <li>
+                  <span class="label label-primary">Layout</span>
+                   : ajouter un
+                  <a href="http://developer.android.com/reference/android/support/v4/widget/DrawerLayout.html">
+                    drawer layout
+                  </a>
+                  en utilisant un simple TextView comme drawer.
+                </li>
+                <li>
+                  <span class="label label-primary">Layout</span>
+                  Ajouter une NavigationView
+                  <a href="http://developer.android.com/reference/android/support/design/widget/NavigationView.html">
+                    navigation view
+                  </a>
+                </li>
+                <li>
+                  <span class="label label-primary">Layout</span>
+                  Ajouter un menu avec trois options pour le test.
+                </li>
+                <li>
+                  <span class="label label-success">Code</span>
+                  Ajouter un
+                  <a href="http://developer.android.com/reference/android/support/design/widget/NavigationView.OnNavigationItemSelectedListener.html">
+                    OnNavigationItemSelectedListener
+                  </a>
+                  pour réagir aux appuis sur les options du menu avec un Toast.
+                </li>
+              </ul>
             </div>
             <div class="col-md-4 alert alert-warning">
               <strong>Pendant la séance en classe</strong>
+              <p>
+                Démo d'ajout d'un Drawer sur une activité existante.
 
+              </p>
+              <p>
+                Plan de match pour votre application.
+              </p>
             </div>
             <div class="col-md-4 alert alert-info">
               <strong>Pendant la séance en laboratoire</strong>
-
+              <p>
+                Vous devez compléter la navigation de votre application entre
+                les différentes activités.
+              </p>
             </div>
           </div>
         </div>
@@ -412,6 +509,10 @@
             <h3 id="s12">Semaine 12 : appels HTTP dans Android et asynchronisme</h3>
             <div class="col-md-4 alert alert-success">
               <strong>Avant la séance (2h)</strong>
+              <p>
+                Lisez la page sur <a href="http://developer.android.com/training/volley/index.html">volley</a>.
+
+              </p>
               Volley
             </div>
             <div class="col-md-4 alert alert-warning">
