@@ -71,11 +71,17 @@
               <ul class="dropdown-menu" role="menu">
                 <li><a href="https://www.youtube.com/watch?v=r9lYkNauGMg&list=PLYHAgLf_cnWQccEbrvVCJksLSfc5f0nR_">Liste de lecture Java</a></li>
                 <li class="divider"></li>
-                <li><a href="https://youtu.be/kpBcxKXacZM">Impératif et boucles</a></li>
+                <li class="dropdown-header">Architecture</li>
+                <li><a href="https://youtu.be/tkSaWvoX4Wo">Modèle et service</a></li>
+                <li><a href="https://youtu.be/tkSaWvoX4Wo">Bus d'événements</a></li>
+
                 <li class="divider"></li>
-                <li><a href="https://youtu.be/xUfl8cSVi7s">Premier projet Android Studio</a></li>
+                <li class="dropdown-header">Interface graphique</li>
                 <li><a href="https://youtu.be/tkSaWvoX4Wo">Tape le lapin</a></li>
+                <li><a href="https://youtu.be/xUfl8cSVi7s">Premier projet Android Studio</a></li>
+
                 <li class="divider"></li>
+                <li class="dropdown-header">Serveur</li>
                 <li><a href="https://youtu.be/IRgYZzYTUT0">Web service avec Jersey</a></li>
                 <li><a href="https://youtu.be/x-dQ5Sa0Ns0">Stockage avec Hibernate</a></li>
               </ul>
@@ -143,6 +149,12 @@
               <p>
                 Pensez à apporter votre ordinateur si vous voulez vérifier votre installation.
               </p>
+              <p>
+                Révisez la programmation Android de base avec la video:
+                <a class="btn btn-primary btn-xs" href="https://youtu.be/tkSaWvoX4Wo">Tape le lapin</a>.
+                Essayez de reproduire de résultat sans vous référez à la video.
+              </p>
+
             </div>
             <div class="col-md-4 alert  alert-warning">
               <strong>Pendant la séance en classe</strong>
@@ -239,10 +251,31 @@
         </div>
         <div class="row">
           <div class="">
-            <h3 id="s5">Semaine 3 : Fragment, activités et bus d'événements</h3>
+            <h3 id="s5">Semaine 3 : ASYNCHRONISME plutot que (fragment), activités et bus d'événements</h3>
             <div class="col-md-4 alert alert-success">
               <strong>Avant la séance (2h)</strong>
               <p>
+                <a href="https://github.com/BoltsFramework/Bolts-Android">Bolts</a>
+                http://blog.danlew.net/2014/06/21/the-hidden-pitfalls-of-asynctask/
+                https://github.com/ReactiveX/RxJava/wiki/How-To-Use-RxJava
+                http://square.github.io/retrofit/
+                http://square.github.io/otto/
+              </p>
+              <p>
+                <strong>Java</strong>
+                Show RxJava first
+                Then show retrofit that returns RxJava.
+                https://realm.io/news/droidcon-jake-wharton-simple-http-retrofit-2/ !!!!
+                Faire un service qui prend n secondes sur le serveur
+                <strong>Android</strong>
+                Tape un bouton déclenche le code, réagit dans l'interface
+              </p>
+                https://www.ekreative.com/blog/how-to-use-retrofit-and-otto-for-android-networking
+                https://www.linkedin.com/pulse/networking-made-easy-android-retrofit-haider-khan
+
+                COMBINAISON ASYNCHRO + BUS EVENTS POUR PARTIR EN THREAD DE FOND
+                + ENVOYER L'ÉVÉNEMENTS AU BUS POUR ATTEINDRE L'OBJET QUI EST À L'ECRAN
+                AU MOMENT DE LA RECEPTION (et pas l'objet vers lequel on a mis une référence au départ)
                 Lisez la page Android pour vous familiariser avec la notion de Fragment
                 <a href="" class="btn btn-primary btn-xs">ici</a>
               </p>
@@ -267,14 +300,42 @@
                 sont les éléments essentiels au bon fonctionnement.
               </p>
               <p>
-                VIDEO?
+                Essayez de mettre en oeuvre les étapes suivantes
               </p>
+              <ul>
+                <li>
+                  <span class="label label-primary">Layout</span>
+                  Créez 2 layouts avec le même nom, un par défaut et un pour le mode paysage.
+                  Ajouter un TextView avec une couleur de fond dans celui pour paysage.
+                  Testez en tournant la tablette pour voir si le layout change.
+                </li>
+                <li>
+                  <span class="label label-primary">Layout</span>
+                  Ajouter le éléments nécessaire pour remplacer le TextView dans le layout
+                  paysage
+                </li>
+                <li>
+                  <span class="label label-success">Code</span>
+                  Calculer une variable indiquant le mode dans le onCreate de l'Activity.
+                  Afficher le dans un Toast ou un Log et testez.
+                </li>
+                <li>
+                  <span class="label label-success">Code</span>
+                  Insérez un <strong>if</strong> dans chaque morceau de code réagissant à la
+                  partie commune. Vous devrez effectuer l'action appropriée pour
+                  <ul>
+                    <li>mode portrait : partir une autre activité en lui passant ce qu'il faut</li>
+                    <li>mode paysage : mettre à jour l'information dans la partie exclusive paysage</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
             <div class="col-md-4 alert alert-warning">
               <strong>Pendant la séance en classe</strong>
               <p>
                 Démonstration de création étape par étape d'une interface adaptive.
               </p>
+
             </div>
             <div class="col-md-4 alert alert-info">
               <strong>Pendant la séance de laboratoire</strong>
@@ -392,8 +453,8 @@
               <strong>Pendant la séance</strong>
               L'examen dure 2h (plus si vous avez droit à du temps supplémentaire).
               <ul>
-                <li>Vous avez le droit à une feuille de notes manuscrites recto-verso</li>
-                <li>L'examen peut comporter des parties pratiques (HTML à produire) ou des questions à développement</li>
+                <li>Vous avez le droit à toute votre documentation</li>
+                <li>Il s'agit de projets à créer et/ou compléter</li>
               </ul>
             </div>
           </div>
@@ -560,9 +621,11 @@
             </div>
             <div class="col-md-4 alert alert-success">
               <strong>Avant la séance (2h)</strong>
-              Essayez d'identifier les points sur lesquels vous avez des difficultés. Envoyez un MIO à
-              votre professeur pour qu'il puisse préparer des exercices supplémentaires en lien avec
-              ces points qui vous posent problème.
+              Vous pouvez regarder les librairies suivantes
+              <ul>
+                <li>http://developer.android.com/tools/data-binding/guide.html</li>
+                <li>android annotations</li>
+              </ul>
             </div>
             <div class="col-md-4 alert alert-warning">
               <strong>Pendant la séance en classe</strong>
