@@ -160,7 +160,7 @@
       </div>
       <div class="row">
         <div class="">
-            <h3 id="s1">Semaine 1 : Reprise et révisions, librairie de support</h3>
+            <h3 id="s1">Semaine 1 : multiple activités, librairie de support</h3>
             <div class="col-md-4 alert">
               <strong>Avant la séance</strong>
               <p>
@@ -216,28 +216,38 @@
       </div>
       <div class="row">
         <div class="">
-            <h3 id="s2" >Semaine 2 : Service et repository</h3>
+            <h3 id="s2" >Semaine 2 : Mise en page, identification des méthodes de Service</h3>
             <div class="col-md-4 alert alert-success">
               <strong>Avant la séance (2h)</strong>
               <p>
-                Vous devez parcourir la page Wikipedia concernant le Singleton
-                <a class="btn btn-xs btn-primary" target="_blank" href="">
-                  Singleton
-                </a> (max 20 minutes).
+                Vous devez regarder la video suivante
+                <a href="https://youtu.be/x-dQ5Sa0Ns0">Linear Layout (Youtube)</a>
               </p>
-              Service et repository VIDEO ????  OUI C IMPORTANT
-
-              Singleton et threads demonstration de plusieurs ca d'usage de synchronized
+              <p>
+                Vous devez dessiner les interfaces de votre projet. Vous devez intégrer
+                une vue de connexion (signin / signup), une vue de consultation de liste
+                une vue de détail et une vue de création.
+              </p>
+              <p>
+                Vous devez commencer à programmer les vues en les remplissant avec de fausses
+                informations.
+              </p>
+              <p>
+                Au fil de votre programmation, vous identifierez les différentes
+                méthodes de services nécessaires.
+                VIDEO.
+              </p>
             </div>
             <div class="col-md-4 alert  alert-warning">
               <strong>Pendant la séance en classe</strong>
               <p>
-                Nous allons revenir par l'exemple sur la différence entre un service
-                et un repository. Nous reverrons également comment cela s'articule avec
-                le modèle de données. Le tout sera illustré sur un exemple d'application
+                Nous allons revenir par l'exemple sur les interfaces, la mise en page.
+                Nous reverrons également comment cela s'articule avec la définition d'un
+                service et d'un modèle de données.
+                Le tout sera illustré sur un exemple d'application
                 qui sera suivi tout au long de la session.
 
-                FAIRE VIDEO SUR SERVICE REPOSITORY
+                FAIRE VIDEO SUR SERVICE
               </p>
               <p>
                 Vous trouverez quelques métaphores sur la différence entre service et
@@ -268,7 +278,69 @@
         </div>
         <div class="row">
           <div class="">
-            <h3 id="s3">Semaine 3 : ASYNCHRONISME plutot que (fragment), activités et bus d'événements</h3>
+            <h3 id="s3">Semaine 3 : navigation : drawer et navigation descendante et latérale</h3>
+            <div class="col-md-4 alert alert-success">
+              <strong>Avant la séance (2h)</strong>
+              <p>
+
+                VIDEO ou exemple
+              </p>
+              <p>
+                Essayez d'appliquer les étapes suivantes sur une activité existante
+              </p>
+              <ul>
+                <li>
+                  <span class="label label-primary">Layout</span>
+                   : ajouter un
+                  <a href="http://developer.android.com/reference/android/support/v4/widget/DrawerLayout.html">
+                    drawer layout
+                  </a>
+                  en utilisant un simple TextView comme drawer.
+                </li>
+                <li>
+                  <span class="label label-primary">Layout</span>
+                  Ajouter une NavigationView
+                  <a href="http://developer.android.com/reference/android/support/design/widget/NavigationView.html">
+                    navigation view
+                  </a>
+                </li>
+                <li>
+                  <span class="label label-primary">Layout</span>
+                  Ajouter un menu avec trois options pour le test.
+                </li>
+                <li>
+                  <span class="label label-success">Code</span>
+                  Ajouter un
+                  <a href="http://developer.android.com/reference/android/support/design/widget/NavigationView.OnNavigationItemSelectedListener.html">
+                    OnNavigationItemSelectedListener
+                  </a>
+                  pour réagir aux appuis sur les options du menu avec un Toast.
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4 alert alert-warning">
+              <strong>Pendant la séance en classe</strong>
+              <p>
+                Démo d'ajout d'un Drawer sur une activité existante.
+
+              </p>
+              <p>
+                Vous devez compléter l'intégration du drawer dans les activités
+                appropriées (la plupart du temps, toutes les activités sauf celle de connexion).
+              </p>
+            </div>
+            <div class="col-md-4 alert alert-info">
+              <strong>Pendant la séance en laboratoire</strong>
+              <p>
+                Vous devez compléter la navigation de votre application entre
+                les différentes activités.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="">
+            <h3 id="s4">Semaine 4 : Réseau et accès asynchrones</h3>
             <div class="col-md-4 alert alert-success">
               <strong>Avant la séance (2h)</strong>
               <p>
@@ -278,22 +350,32 @@
                 http://square.github.io/retrofit/
                 http://square.github.io/otto/
               </p>
+              <strong>Java</strong>
               <p>
-                <strong>Java</strong>
-                Show RxJava first
-                Then show retrofit that returns RxJava.
-                https://realm.io/news/droidcon-jake-wharton-simple-http-retrofit-2/ !!!!
+                <ul>
+                  <li>https://jersey.java.net/documentation/latest/rx-client.html</li>
+                  <li>https://realm.io/news/droidcon-jake-wharton-simple-http-retrofit-2/</li>
+                  <li>https://www.ekreative.com/blog/how-to-use-retrofit-and-otto-for-android-networking</li>
+                  <li>https://www.linkedin.com/pulse/networking-made-easy-android-retrofit-haider-khan</li>
+                  <li>http://square.github.io/retrofit/</li>
+                  <li>https://github.com/ReactiveX/RxJava</li>
+                </ul>
+                Critères de Joris
+                <ul>
+                  <li>Permet d'écrire des tests unitaires</li>
+                  <li>Gestion des exceptions</li>
+                  <li>Gestion du cookie d'authentification https://futurestud.io/blog/retrofit-token-authentication-on-android</li>
+                </ul>
+                RxJava with Retrofit of Jersey
                 Faire un service qui prend n secondes sur le serveur
                 <strong>Android</strong>
                 Tape un bouton déclenche le code, réagit dans l'interface
               </p>
-                https://www.ekreative.com/blog/how-to-use-retrofit-and-otto-for-android-networking
-                https://www.linkedin.com/pulse/networking-made-easy-android-retrofit-haider-khan
+              <p>
 
                 COMBINAISON ASYNCHRO + BUS EVENTS POUR PARTIR EN THREAD DE FOND
                 + ENVOYER L'ÉVÉNEMENTS AU BUS POUR ATTEINDRE L'OBJET QUI EST À L'ECRAN
                 AU MOMENT DE LA RECEPTION (et pas l'objet vers lequel on a mis une référence au départ)
-                Lisez la page Android pour vous familiariser avec la notion de Fragment
                 <a href="" class="btn btn-primary btn-xs">ici</a>
               </p>
             </div>
@@ -307,9 +389,234 @@
             </div>
           </div>
         </div>
+
         <div class="row">
           <div class="">
-            <h3 id="s4">Semaine 4 : interface adaptive, mode portrait et paysage</h3>
+            <h3 id="s5">Semaine 5 : intégration et affichage de l'attente</h3>
+            <div class="col-md-12 alert alert-danger">
+              <strong>Remise de travail</strong>
+
+            </div>
+            <div class="col-md-4 alert alert-success">
+              <strong>Avant la séance (2h)</strong>
+
+            </div>
+            <div class="col-md-4 alert alert-warning">
+              <strong>Pendant la séance en classe</strong>
+
+            </div>
+            <div class="col-md-4 alert alert-info">
+              <strong>Pendant la séance en laboratoire</strong>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="">
+            <h3 id="s6">Semaine 6 : révisions, intégration</h3>
+            <div class="col-md-12 alert alert-danger">
+              <strong>Remise de travail</strong>
+
+            </div>
+            <div class="col-md-4 alert alert-success">
+              <strong>Avant la séance (2h)</strong>
+
+            </div>
+            <div class="col-md-4 alert alert-warning">
+              <strong>Pendant la séance en classe</strong>
+
+            </div>
+            <div class="col-md-4 alert alert-info">
+              <strong>Pendant la séance en laboratoire</strong>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="">
+            <h3 id="s7">Semaine 7 : Examen Intra</h3>
+            <div class="col-md-4 alert alert-success">
+              <strong>Avant la séance (2h)</strong>
+              L'examen porte sur l'ensemble du contenu vu depuis le début de la session. Afin de vous aider
+              dans vos révisions, nous vous conseillons de:
+              <ul>
+                <li>Revoir les exercices vus jusqu'ici et identifier ceux que vous ne savez pas faire sans votre solution ou le prof</li>
+                <li>Reprendre les éléments de contenu qui y correspondent (vidéos et présentations)</li>
+              </ul>
+              Si vous avez droit à du temps supplémentaire, vous devez aviser votre professeur de votre
+              intention de l'utiliser.
+            </div>
+            <div class="col-md-4 alert alert-warning">
+              <strong>Pendant la séance en classe</strong>
+              Révisions en classe. Nous reverrons les éléments que vous souhaitez. Signalez moi un point à revoir par
+              MIO avant la séance.
+            </div>
+            <div class="col-md-4 alert alert-danger">
+              <strong>Pendant la séance</strong>
+              L'examen dure 2h (plus si vous avez droit à du temps supplémentaire).
+              <ul>
+                <li>Vous avez le droit à toute votre documentation</li>
+                <li>Il s'agit de projets à créer et/ou compléter</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="">
+            <h3 id="s8">Semaine 8: serveur applicatif HTTP en Java, Jersey et web services</h3>
+            <div class="col-md-4 alert alert-success">
+              <strong>Avant la séance (2h)</strong>
+              VOIR SI ON PEUT TROUVE RUNE BONNE VIDEO SUR salle serveur
+              Vous devez préparer une question sur un point que vous voulez connaître concernant les
+              infrastructures informatiques du collège. Exemple : "Combien y a-t-il de prises réseaux au collège?"
+            </div>
+            <div class="col-md-4 alert alert-warning">
+              <strong>Pendant la séance</strong>
+              <p>
+
+              </p>
+            </div>
+            <div class="col-md-4 alert alert-info">
+              <strong>Pendant la séance</strong>
+              <p>
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="">
+            <h3 id="s9">Semaine 9 : échanges de données en JSON et HTTP</h3>
+            <div class="col-md-4 alert alert-success">
+              <strong>Avant la séance (2h)</strong>
+
+            </div>
+            <div class="col-md-4 alert alert-warning">
+              <strong>Pendant la séance en classe</strong>
+              <p>
+
+              </p>
+            </div>
+            <div class="col-md-4 alert alert-info">
+              <strong>Pendant la séance de laboratoire</strong>
+              <p>
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="">
+            <h3 id="s10">Semaine 10 : accès HTTP et asynchronisme</h3>
+            <div class="col-md-4 alert alert-success">
+              <strong>Avant la séance (2h)</strong>
+            </div>
+            <div class="col-md-4 alert alert-warning">
+              <strong>Pendant la séance en classe</strong>
+              <p>
+
+              </p>
+            </div>
+            <div class="col-md-4 alert alert-info">
+              <strong>Pendant la séance de laboratoire</strong>
+              <p>
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="">
+            <h3 id="s11">Semaine 11 : mot de passe, cookie token et sécurité</h3>
+            <div class="col-md-12 alert alert-danger">
+              <strong>Remise de travail</strong>
+              Vous devez remettre la phase 3 du projet.
+            </div>
+            <div class="col-md-4 alert alert-success">
+              <strong>Avant la séance (2h)</strong>
+              <p>
+
+              </p>
+              <ul>
+                <li>Singleton / factory</li>
+                <li>Adapter / wrapper</li>
+                <li>Iterator / Generator</li>
+              </ul>
+            </div>
+            <div class="col-md-4 alert alert-warning">
+              <strong>Pendant la séance en classe</strong>
+              <p>
+
+              </p>
+            </div>
+            <div class="col-md-4 alert alert-info">
+              <strong>Pendant la séance de laboratoire</strong>
+              <p>
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="">
+            <h3 id="s12">Semaine 12 : Intégration de l'authentification</h3>
+            <div class="col-md-4 alert alert-success">
+              <strong>Avant la séance (2h)</strong>
+              <p>
+                Lisez la page sur <a href="http://developer.android.com/training/volley/index.html">volley</a>.
+
+              </p>
+              Volley
+            </div>
+            <div class="col-md-4 alert alert-warning">
+              <strong>Pendant la séance en classe</strong>
+              <p>
+
+              </p>
+            </div>
+            <div class="col-md-4 alert alert-info">
+              <strong>Pendant la séance de laboratoire</strong>
+              <p>
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="">
+            <h3 id="s12">Semaine 12 : Intégration des éléments HTTP sur un exemple</h3>
+            <div class="col-md-4 alert alert-success">
+              Pratique
+            </div>
+            <div class="col-md-4 alert alert-warning">
+              <strong>Pendant la séance en classe</strong>
+              <p>
+
+              </p>
+            </div>
+            <div class="col-md-4 alert alert-info">
+              <strong>Pendant la séance de laboratoire</strong>
+              <p>
+                Remplacer tous les traitements d'événements dans votre applications par l'utilisation d'un bus
+                d'événements.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="">
+            <h3 id="s13">Semaine 13 : interface adaptive, mode portrait et paysage</h3>
             <div class="col-md-4 alert alert-success">
               <strong>Avant la séance (2h)</strong>
               <p>
@@ -363,275 +670,9 @@
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="">
-            <h3 id="s5">Semaine 5 : navigation, drawer et navigation latérale</h3>
-            <div class="col-md-4 alert alert-success">
-              <strong>Avant la séance (2h)</strong>
-              <p>
-                VIDEO ou exemple
-              </p>
-              <p>
-                Essayez d'appliquer les étapes suivantes sur une activité existante
-              </p>
-              <ul>
-                <li>
-                  <span class="label label-primary">Layout</span>
-                   : ajouter un
-                  <a href="http://developer.android.com/reference/android/support/v4/widget/DrawerLayout.html">
-                    drawer layout
-                  </a>
-                  en utilisant un simple TextView comme drawer.
-                </li>
-                <li>
-                  <span class="label label-primary">Layout</span>
-                  Ajouter une NavigationView
-                  <a href="http://developer.android.com/reference/android/support/design/widget/NavigationView.html">
-                    navigation view
-                  </a>
-                </li>
-                <li>
-                  <span class="label label-primary">Layout</span>
-                  Ajouter un menu avec trois options pour le test.
-                </li>
-                <li>
-                  <span class="label label-success">Code</span>
-                  Ajouter un
-                  <a href="http://developer.android.com/reference/android/support/design/widget/NavigationView.OnNavigationItemSelectedListener.html">
-                    OnNavigationItemSelectedListener
-                  </a>
-                  pour réagir aux appuis sur les options du menu avec un Toast.
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-4 alert alert-warning">
-              <strong>Pendant la séance en classe</strong>
-              <p>
-                Démo d'ajout d'un Drawer sur une activité existante.
-
-              </p>
-              <p>
-                Plan de match pour votre application.
-              </p>
-            </div>
-            <div class="col-md-4 alert alert-info">
-              <strong>Pendant la séance en laboratoire</strong>
-              <p>
-                Vous devez compléter la navigation de votre application entre
-                les différentes activités.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="">
-            <h3 id="s6">Semaine 6 : intégration de l'interface graphique</h3>
-            <div class="col-md-12 alert alert-danger">
-              <strong>Remise de travail</strong>
-
-            </div>
-            <div class="col-md-4 alert alert-success">
-              <strong>Avant la séance (2h)</strong>
-
-            </div>
-            <div class="col-md-4 alert alert-warning">
-              <strong>Pendant la séance en classe</strong>
-
-            </div>
-            <div class="col-md-4 alert alert-info">
-              <strong>Pendant la séance en laboratoire</strong>
-
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row">
-          <div class="">
-            <h3 id="s7">Semaine 7 : Examen Intra</h3>
-            <div class="col-md-4 alert alert-success">
-              <strong>Avant la séance (2h)</strong>
-              L'examen porte sur l'ensemble du contenu vu depuis le début de la session. Afin de vous aider
-              dans vos révisions, nous vous conseillons de:
-              <ul>
-                <li>Revoir les exercices vus jusqu'ici et identifier ceux que vous ne savez pas faire sans votre solution ou le prof</li>
-                <li>Reprendre les éléments de contenu qui y correspondent (vidéos et présentations)</li>
-              </ul>
-              Si vous avez droit à du temps supplémentaire, vous devez aviser votre professeur de votre
-              intention de l'utiliser.
-            </div>
-            <div class="col-md-4 alert alert-warning">
-              <strong>Pendant la séance en classe</strong>
-              Révisions en classe. Nous reverrons les éléments que vous souhaitez. Signalez moi un point à revoir par
-              MIO avant la séance.
-            </div>
-            <div class="col-md-4 alert alert-danger">
-              <strong>Pendant la séance</strong>
-              L'examen dure 2h (plus si vous avez droit à du temps supplémentaire).
-              <ul>
-                <li>Vous avez le droit à toute votre documentation</li>
-                <li>Il s'agit de projets à créer et/ou compléter</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="">
-            <h3 id="s8">Semaine 8: Intra</h3>
-            <div class="col-md-4 alert alert-success">
-              <strong>Avant la séance (2h)</strong>
-              VOIR SI ON PEUT TROUVE RUNE BONNE VIDEO SUR salle serveur
-              Vous devez préparer une question sur un point que vous voulez connaître concernant les
-              infrastructures informatiques du collège. Exemple : "Combien y a-t-il de prises réseaux au collège?"
-            </div>
-            <div class="col-md-4 alert alert-warning">
-              <strong>Pendant la séance</strong>
-              <p>
-
-              </p>
-            </div>
-            <div class="col-md-4 alert alert-info">
-              <strong>Pendant la séance</strong>
-              <p>
-
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="">
-            <h3 id="s9">Semaine 9 : serveur applicatif HTTP en Java, Jersey et web services</h3>
-
-            <div class="col-md-4 alert alert-success">
-              <strong>Avant la séance (2h)</strong>
-
-            </div>
-            <div class="col-md-4 alert alert-warning">
-              <strong>Pendant la séance en classe</strong>
-              <p>
-
-              </p>
-            </div>
-            <div class="col-md-4 alert alert-info">
-              <strong>Pendant la séance de laboratoire</strong>
-              <p>
-
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="">
-            <h3 id="s10">Semaine 10 : Client Java HTTP</h3>
-            <div class="col-md-4 alert alert-success">
-              <strong>Avant la séance (2h)</strong>
-
-              Possibilités ORM
-            </div>
-            <div class="col-md-4 alert alert-warning">
-              <strong>Pendant la séance en classe</strong>
-              <p>
-
-              </p>
-            </div>
-            <div class="col-md-4 alert alert-info">
-              <strong>Pendant la séance de laboratoire</strong>
-              <p>
-
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-
-
-        <div class="row">
-          <div class="">
-            <h3 id="s11">Semaine 11 : sérialisation et transport d'information en HTTP</h3>
-            <div class="col-md-12 alert alert-danger">
-              <strong>Remise de travail</strong>
-              Vous devez remettre la phase 3 du projet.
-            </div>
-            <div class="col-md-4 alert alert-success">
-              <strong>Avant la séance (2h)</strong>
-              <p>
-
-              </p>
-              <ul>
-                <li>Singleton / factory</li>
-                <li>Adapter / wrapper</li>
-                <li>Iterator / Generator</li>
-              </ul>
-            </div>
-            <div class="col-md-4 alert alert-warning">
-              <strong>Pendant la séance en classe</strong>
-              <p>
-
-              </p>
-            </div>
-            <div class="col-md-4 alert alert-info">
-              <strong>Pendant la séance de laboratoire</strong>
-              <p>
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="">
-            <h3 id="s12">Semaine 12 : appels HTTP dans Android et asynchronisme</h3>
-            <div class="col-md-4 alert alert-success">
-              <strong>Avant la séance (2h)</strong>
-              <p>
-                Lisez la page sur <a href="http://developer.android.com/training/volley/index.html">volley</a>.
-
-              </p>
-              Volley
-            </div>
-            <div class="col-md-4 alert alert-warning">
-              <strong>Pendant la séance en classe</strong>
-              <p>
-
-              </p>
-            </div>
-            <div class="col-md-4 alert alert-info">
-              <strong>Pendant la séance de laboratoire</strong>
-              <p>
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="">
-            <h3 id="s13">Semaine 13 : Intégration des éléments HTTP sur un exemple</h3>
-            <div class="col-md-4 alert alert-success">
-              Pratique
-            </div>
-            <div class="col-md-4 alert alert-warning">
-              <strong>Pendant la séance en classe</strong>
-              <p>
-
-              </p>
-            </div>
-            <div class="col-md-4 alert alert-info">
-              <strong>Pendant la séance de laboratoire</strong>
-              <p>
-                Remplacer tous les traitements d'événements dans votre applications par l'utilisation d'un bus
-                d'événements.
-              </p>
-            </div>
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="">
-            <h3 id="s14">Semaine 14 : Révisions (optionnel)</h3>
+            <h3 id="s14">Semaine 14 : Révisions</h3>
             <div class="col-md-12 alert alert-danger">
               <strong>Remise de travail</strong>
               Vous devez remettre la Phase 4 du projet avant minuit le jour de cette séance.
@@ -700,11 +741,6 @@
 
 
     </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="bootstrap/jquery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
