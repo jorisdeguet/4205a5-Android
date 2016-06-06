@@ -7,6 +7,10 @@ import java.io.IOException;
 
 /**
  * Created by joris on 16-05-29.
+ *
+ * http://riggaroo.co.za/retrofit-2-mocking-http-responses/ tests without the service implemented
+ * http://stackoverflow.com/questions/34740665/how-to-mock-services-with-retrofit-2-0-and-the-new-mockretrofit-class
+ *
  */
 public class TestRetrofit extends AndroidTestCase{
 
