@@ -29,32 +29,32 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">420-5A5 : <strong>Programmation mobile</strong></a>
+        <a class="navbar-brand" href="./index.html">S13 : <strong>Programmation mobile</strong></a>
       </div>
       <div class="navbar-collapse collapse navbar-right">
         <ul class="nav navbar-nav">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Semaines<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="s01.html">Semaine 1</a></li>
-              <li><a href="s02.html">Semaine 2</a></li>
+              <li><a href="#s1">Semaine 1</a></li>
+              <li><a href="#s2">Semaine 2</a></li>
               <li class="divider"></li>
-              <li><a href="s03.html">Semaine 3</a></li>
-              <li><a href="s04.html">Semaine 4</a></li>
-              <li><a href="s05.html">Semaine 5</a></li>
-              <li><a href="s06.html">Semaine 6</a></li>
+              <li><a href="#s3">Semaine 3</a></li>
+              <li><a href="#s4">Semaine 4</a></li>
+              <li><a href="#s5">Semaine 5</a></li>
+              <li><a href="#s6">Semaine 6</a></li>
               <li class="divider"></li>
-              <li><a href="s07.html">Semaine 7</a></li>
-              <li><a href="s08.html">Semaine 8</a></li>
+              <li><a href="#s7">Semaine 7</a></li>
+              <li><a href="#s8">Semaine 8</a></li>
               <li class="divider"></li>
-              <li><a href="s09.html">Semaine 9</a></li>
-              <li><a href="s10.html">Semaine 10</a></li>
-              <li><a href="s11.html">Semaine 11</a></li>
-              <li><a href="s12.html">Semaine 12</a></li>
+              <li><a href="#s9">Semaine 9</a></li>
+              <li><a href="#s10">Semaine 10</a></li>
+              <li><a href="#s11">Semaine 11</a></li>
+              <li><a href="#s12">Semaine 12</a></li>
               <li class="divider"></li>
-              <li><a href="s13.html">Semaine 13</a></li>
-              <li><a href="s14.html">Semaine 14</a></li>
-              <li><a href="s15.html">Semaine 15</a></li>
+              <li><a href="#s13">Semaine 13</a></li>
+              <li><a href="#s14">Semaine 14 </a></li>
+              <li><a href="#s15">Semaine 15 </a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -109,57 +109,83 @@
 
   <div class="container">
 
+
     <div class="row">
       <div class="">
-        <h3>Organisation du cours</h3>
-        <div class="col-md-4 alert">
-          <strong>Déroulement d'une semaine type</strong>
+        <h3 id="s13">Semaine 13 : interface adaptive, mode portrait et paysage</h3>
+        <div class="col-md-12 alert alert-danger">
+          <strong>Évaluations</strong>
           <p>
-            Chaque semaine, vous aurez du travail préparatoire pour découvrir la matière par vous-même.
-            Il s'agira d'une page web à lire, d'une video à suivre et/ou d'exercices à faire.
-            Cela représente environ 2 heures de travail.
-          </p>
-          <p>
-            Ensuite pendant la séance, vous pourrez :
-            <ul>
-              <li>compléter et valider vos exercices avec le professeur</li>
-              <li>poser des questions</li>
-              <li>compléter les travaux évalués</li>
-            </ul>
-            L'ensemble du travail demandé doit être fait pendant la période.
+
           </p>
         </div>
-        <div class="col-md-4 well">
-          <strong>Installation à la maison</strong>
+        <div class="col-md-4 alert alert-success">
+          <strong>Avant la séance (2h)</strong>
           <p>
-            À la maison, vous devez installer
-            <a target="_blank" class="btn btn-primary btn-xs" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Dev Kit</a> et l'environnement de développement
-            <a target="_blank" class="btn btn-primary btn-xs" href="https://www.jetbrains.com/idea/">Intellij IDEA</a>
+            Regardez l'exemple et en enlevant des morceaux de code, identifiez quels
+            sont les éléments essentiels au bon fonctionnement.
+          </p>
+          <p>
+            Essayez de mettre en oeuvre les étapes suivantes
+          </p>
+          <ul>
+            <li>
+              <span class="label label-primary">Layout</span>
+              Créez 2 layouts avec le même nom, un par défaut et un pour le mode paysage.
+              Ajouter un TextView avec une couleur de fond dans celui pour paysage.
+              Testez en tournant la tablette pour voir si le layout change.
+            </li>
+            <li>
+              <span class="label label-primary">Layout</span>
+              Ajouter le éléments nécessaire pour remplacer le TextView dans le layout
+              paysage
+            </li>
+            <li>
+              <span class="label label-success">Code</span>
+              Calculer une variable indiquant le mode dans le onCreate de l'Activity.
+              Afficher le dans un Toast ou un Log et testez.
+            </li>
+            <li>
+              <span class="label label-success">Code</span>
+              Insérez un <strong>if</strong> dans chaque morceau de code réagissant à la
+              partie commune. Vous devrez effectuer l'action appropriée pour
+              <ul>
+                <li>mode portrait : partir une autre activité en lui passant ce qu'il faut</li>
+                <li>mode paysage : mettre à jour l'information dans la partie exclusive paysage</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 alert alert-warning">
+          <strong>Pendant la séance en classe</strong>
+          <p>
+            Démonstration de création étape par étape d'une interface adaptive.
+          </p>
+
+        </div>
+        <div class="col-md-4 alert alert-info">
+          <strong>Pendant la séance de laboratoire</strong>
+          <p>
+            Vous devrez compléter la programmation de votre activité qui gère
+            des interfaces différentes en portrait / paysage.
           </p>
         </div>
-        <div class="col-md-4 alert ">
-          <strong>Votre propre application mobile</strong>
-          <p>
-            Vous devez développer votre propre application mobile au cours de la session.
-            Les 3 phases du projet porteront sur cette application.
-          </p>
-          <ol>
-            <li><a class="btn btn-primary btn-xs" href="s01.html">>></a> Plusieurs activités, librairies de support</li>
-            <li><a class="btn btn-primary btn-xs" href="s02.html">>></a> Mise en page et besoins de service</li>
-            <li><a class="btn btn-primary btn-xs" href="s03.html">>></a> Navigation</li>
-            <li><a class="btn btn-primary btn-xs" href="s04.html">>></a> Réseau et asynchronisme</li>
-            <li><a class="btn btn-primary btn-xs" href="s05.html">>></a> Intégration / GUI attente</li>
-            <li><a class="btn btn-primary btn-xs" href="s06.html">>></a> Intégration / révision</li>
-            <li><a class="btn btn-primary btn-xs" href="s07.html">>></a> Intra</li>
-            <li><a class="btn btn-primary btn-xs" href="s08.html">>></a> Sérialisation de données HTTP</li>
-            <li><a class="btn btn-primary btn-xs" href="s09.html">>></a> Serveur et web service en Java (nouvelle version Jersey)</li>
-            <li><a class="btn btn-primary btn-xs" href="s10.html">>></a> Mot de passe, token, cookie et sécurité</li>
-            <li><a class="btn btn-primary btn-xs" href="s11.html">>></a> Réseau et asynchronisme (bis) Retrofit et autres</li>
-            <li><a class="btn btn-primary btn-xs" href="s12.html">>></a> Intégration</li>
-            <li><a class="btn btn-primary btn-xs" href="s13.html">>></a> Portrait paysage</li>
-            <li><a class="btn btn-primary btn-xs" href="s14.html">>></a> Révisions</li>
-            <li><a class="btn btn-primary btn-xs" href="s15.html">>></a> Final</li>
-          </ol>
+        <div class="col-md-12 well">
+          <div>
+            <a class="btn btn-primary btn-xs" role="button" data-toggle="collapse" href="#e13" aria-expanded="false" aria-controls="collapseExample">
+              Exercices de la semaine <span class="caret"></span>
+            </a>
+            <div class="collapse" id="e13">
+              <h3>Exercice A</h3>
+              <p>
+                Plop appelé <strong>simpsons.html</strong>.
+              </p>
+              <h3>Exercice B</h3>
+              <p>
+                yo.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
