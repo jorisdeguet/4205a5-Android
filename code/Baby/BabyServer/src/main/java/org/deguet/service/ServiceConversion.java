@@ -1,8 +1,8 @@
 package org.deguet.service;
 
-import org.deguet.model.NQPerson;
-import org.deguet.model.C2SSignUpRequest;
-import org.deguet.model.S2CPersonLight;
+import org.deguet.model.MUser;
+import org.deguet.model.TLoginPassword;
+import org.deguet.model.TPersonWithoutPassword;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -13,9 +13,9 @@ import java.security.NoSuchAlgorithmException;
  */
 public class ServiceConversion {
 
-    public static S2CPersonLight convert(NQPerson res) {
-        S2CPersonLight result = new S2CPersonLight();
-        result.id = res.getId();
+    public static TPersonWithoutPassword convert(MUser res) {
+        TPersonWithoutPassword result = new TPersonWithoutPassword(res);
+        result.setId(res.getId());
         result.email = anonymiseEmail(res.email);
         return result;
     }
@@ -38,8 +38,8 @@ public class ServiceConversion {
         return result.toString();
     }
 
-    public static NQPerson convert(C2SSignUpRequest r)  {
-        NQPerson p = new NQPerson();
+    public static MUser convert(TLoginPassword r)  {
+        MUser p = new MUser();
         p.email = 			r.email.toLowerCase().trim();
         p.password = 		hash(r.password);
         //p.birthDate = 		r.birthDate.toDate();

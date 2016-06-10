@@ -1,4 +1,4 @@
-package deguet.org.babytracker.model;
+package org.deguet.model;
 
 import java.util.List;
 import java.util.UUID;
@@ -6,7 +6,7 @@ import java.util.UUID;
 /**
  * Created by joris on 15-09-15.
  */
-public class Baby extends Identifiable {
+public class MBaby extends Identifiable {
 
     public String name;
 

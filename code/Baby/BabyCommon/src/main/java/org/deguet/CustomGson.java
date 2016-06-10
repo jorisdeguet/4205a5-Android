@@ -1,5 +1,6 @@
 package org.deguet;
 
+import com.google.common.io.BaseEncoding;
 import com.google.gson.*;
 import org.joda.time.DateTime;
 
@@ -41,11 +42,11 @@ public class CustomGson {
 	
 	public static class ByteArraySerialiser  implements JsonSerializer<byte[]>,JsonDeserializer<byte[]>  {
 		public JsonElement serialize(byte[] src, Type typeOfSrc, JsonSerializationContext context) {
-			return new JsonPrimitive(DatatypeConverter.printBase64Binary(src));
+			return new JsonPrimitive(BaseEncoding.base64().encode(src));
 		}
 		public byte[] deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
 				throws JsonParseException {
-			return DatatypeConverter.parseBase64Binary(json.getAsJsonPrimitive().getAsString());
+			return BaseEncoding.base64().decode(json.getAsJsonPrimitive().getAsString());
 		}
 	}
 

@@ -5,11 +5,11 @@ import org.joda.time.DateTime;
 import java.util.Date;
 import java.util.UUID;
 
-public class NQToken extends Identifiable{
+public class MToken extends Identifiable{
 
 	@Override
 	public String toString() {
-		return "Token [userID=" + userID + ", expirationDate=" + expirationDate
+		return "MToken [userID=" + userID + ", expirationDate=" + expirationDate
 				+ ", getId()=" + getId() + "]";
 	}
 
@@ -17,8 +17,8 @@ public class NQToken extends Identifiable{
 	
 	public Date expirationDate;
 
-	public static NQToken forUser(NQPerson p, int validityInDays) {
-		NQToken t = new NQToken();
+	public static MToken forUser(MUser p, int validityInDays) {
+		MToken t = new MToken();
 		t.expirationDate = DateTime.now().plusDays(validityInDays).toDate();
 		t.userID = p.getId();
 		t.setId(UUID.randomUUID().toString());

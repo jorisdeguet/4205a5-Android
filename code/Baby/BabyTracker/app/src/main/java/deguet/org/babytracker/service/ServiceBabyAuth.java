@@ -1,8 +1,9 @@
 package deguet.org.babytracker.service;
 
+import org.deguet.model.MUser;
+
 import java.util.List;
 
-import deguet.org.babytracker.model.User;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -28,11 +29,11 @@ public interface ServiceBabyAuth {
     Call<String> signout();
 
     @POST("/rest/social/signup")
-    Call<User> signup(@Body EmailPassword signup);
+    Call<MUser> signup(@Body EmailPassword signup);
 
     @POST("/rest/social/invite")
     Call<String> sendInvites(@Body String s) ;
 
     @GET("/rest/social/all")
-    Call<List<User>> all();
+    Call<List<MUser>> all();
 }

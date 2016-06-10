@@ -4,11 +4,9 @@ import com.google.gson.Gson;
 import org.deguet.Exc.BadCredentials;
 import org.deguet.Exc.BadEmail;
 import org.deguet.Exc.NoToken;
-import org.deguet.model.NQToken;
-import org.deguet.model.NQPerson;
-import org.deguet.model.C2SLoginPassword;
-import org.deguet.model.C2SSignUpRequest;
-import org.deguet.model.S2CPersonWithoutPassword;
+import org.deguet.model.*;
+
+import org.deguet.service.ServiceConversion;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,11 +35,11 @@ public class WebServiceVotVot {
 
 	@POST					@Path("/social/signin")
 	//@Consumes(MediaType.APPLICATION_JSON)
-	public Response signin(C2SLoginPassword creds)
+	public Response signin(TLoginPassword creds)
             throws BadCredentials{
-        C2SLoginPassword lp = creds;//gson.fromJson(json, C2SLoginPassword.class);
+        TLoginPassword lp = creds;//gson.fromJson(json, C2SLoginPassword.class);
         logger.debug("WS SOCIAL : SIGNIN request " + lp.toString());
-        NQToken token = Services.vote.signin(lp.email,lp.password);
+        MToken token = Services.vote.signin(lp.email,lp.password);
 
         NewCookie cookiee = new NewCookie(Cookie, token.getId(), "/", "", "id token", 604800, false);
         logger.debug("WS SOCIAL : SIGNIN Success Cookie " + cookiee.toString() + " " +cookiee.getPath());
@@ -56,7 +54,7 @@ public class WebServiceVotVot {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String signinGet(@PathParam("email") String login, @PathParam("password") String password) throws BadCredentials{
 		logger.debug("WS SOCIAL : SIGN IN THROUGH GET");
-		C2SLoginPassword lp = new C2SLoginPassword();
+		TLoginPassword lp = new TLoginPassword();
 		lp.email = login;
 		lp.password = password;
 		return gson.toJson("Hello "+ login);
@@ -66,21 +64,22 @@ public class WebServiceVotVot {
 	// http://localhost:8080/rest/social/returnin/80bbdd51-a02c-4281-8630-d2012113473a
 	@GET					@Path("/social/returnin/{token}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response returninGet(@PathParam("token") String token) throws NoToken{
+	public TPersonWithoutPassword returninGet(@PathParam("token") String token) throws NoToken{
         logger.debug("WS SOCIAL : Return In " + token );
-        NQPerson p = Services.vote.returnWithToken(token);
-        return Response.ok(gson.toJson(new S2CPersonWithoutPassword(p)),MediaType.APPLICATION_JSON).build();
+        MUser p = Services.vote.returnWithToken(token);
+        TPersonWithoutPassword res = ServiceConversion.convert(p);
+        return res;
 
 	}
 
 	@POST					@Path("/social/signup")
 	@Produces(MediaType.APPLICATION_JSON)
-	public NQPerson signup(C2SSignUpRequest person) throws BadEmail, NoSuchAlgorithmException, Exc.MaxReached, Exc.BadSex, UnsupportedEncodingException, Exc.BadBirth {
+	public MUser signup(TLoginPassword person) throws BadEmail{
 		// Get the person that is candidate
         logger.debug("WS SOCIAL : SIGNUP REQUEST " + person);
-		C2SSignUpRequest p = person;//gson.fromJson(person, C2SSignUpRequest.class);
+        TLoginPassword p = person;//gson.fromJson(person, C2SSignUpRequest.class);
         logger.debug("WS SOCIAL : SIGNUP REQUEST person :::: " + p);
-        NQPerson persisted = Services.vote.signUp(p);
+        MUser persisted = Services.vote.signUp(p);
         return persisted;
 
 	}
@@ -105,7 +104,7 @@ public class WebServiceVotVot {
 
     @GET					@Path("/social/all")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<NQPerson> all(@CookieParam(Cookie) Cookie cookie) throws NoToken {
+    public List<MUser> all(@CookieParam(Cookie) Cookie cookie) throws NoToken {
         logger.debug("WS SOCIAL : ALL REQUEST " + cookie);
         if (cookie == null) throw new NoToken();
         return Services.vote.allPeople();

@@ -2,8 +2,9 @@ package deguet.org.babytracker;
 
 import android.util.Log;
 
-import com.google.common.collect.Lists;
 import com.google.gson.Gson;
+
+import org.deguet.CustomGson;
 
 import java.io.IOException;
 import java.net.CookieManager;
@@ -18,7 +19,9 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
+import deguet.org.babytracker.service.Service;
 import deguet.org.babytracker.service.ServiceBabyAuth;
+import deguet.org.babytracker.service.ServiceBabyAuthMock;
 import deguet.org.babytracker.service.ServiceGeocode;
 import okhttp3.Cookie;
 import okhttp3.CookieJar;
@@ -29,9 +32,11 @@ import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
+import retrofit2.mock.BehaviorDelegate;
+import retrofit2.mock.MockRetrofit;
+import retrofit2.mock.NetworkBehavior;
 
 /**
  * Created by joris on 16-04-30.
@@ -47,26 +52,25 @@ public class BabyRetrofitSimple {
 
     ServiceBabyAuth serviceBabyAuth;
 
+    ServiceBabyAuth mockService;
+
     public BabyRetrofitSimple(){
-        retrofit = new Retrofit.Builder()
-                .baseUrl(ServiceGeocode.endPoint)
-                //.addConverterFactory(GsonConverterFactory.create(new Gson()))
-                .addConverterFactory(ScalarsConverterFactory.create())
-                .build();
-        service = retrofit.create(ServiceGeocode.class);
 
-
-
-
-
-        //builder..(cookieManager);
         Retrofit retrofit2 = new Retrofit.Builder()
                 .baseUrl(ServiceBabyAuth.endPoint)
                 .client(getClient())
-                .addConverterFactory(GsonConverterFactory.create(new Gson()))   // TODO use custom Gson
                 .addConverterFactory(ScalarsConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(CustomGson.getIt()))   // TODO use custom Gson
                 .build();
         serviceBabyAuth = retrofit2.create(ServiceBabyAuth.class);
+
+        NetworkBehavior behavior = NetworkBehavior.create();
+
+        MockRetrofit mockRetro = new MockRetrofit.Builder(retrofit2)
+                .networkBehavior(behavior)
+                .build();
+        BehaviorDelegate<ServiceBabyAuth> delegate = mockRetro.create(ServiceBabyAuth.class);
+        mockService = new ServiceBabyAuthMock(delegate);
     }
 
     public static class MyCookieJar implements CookieJar {
@@ -81,7 +85,7 @@ public class BabyRetrofitSimple {
 
         @Override
         public List<Cookie> loadForRequest(HttpUrl url) {
-            List<Cookie> res = Lists.newArrayList();
+            List<Cookie> res = new ArrayList<>();
             if (cookies != null){
                 for(Cookie c : cookies){
                     if (c.expiresAt() > System.currentTimeMillis()) res.add(c);

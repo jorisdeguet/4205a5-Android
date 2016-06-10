@@ -2,6 +2,8 @@ package deguet.org.babytracker.repo;
 
 import android.content.Context;
 
+import org.deguet.model.MBaby;
+import org.deguet.model.MBabyEvent;
 import org.joda.time.DateTime;
 
 import java.util.ArrayList;
@@ -10,25 +12,23 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.UUID;
 
-import deguet.org.babytracker.model.Baby;
-import deguet.org.babytracker.model.BabyEvent;
 
 /**
  * Created by joris on 15-09-15.
  */
-public class RepoBabyEvent extends RepoGSON<BabyEvent>{
+public class RepoBabyEvent extends RepoGSON<MBabyEvent>{
 
     public RepoBabyEvent(Context context){
-        super(context,BabyEvent.class);
+        super(context,MBabyEvent.class);
     }
 
-    public List<BabyEvent> last20Events() {
-        List<BabyEvent> result = new ArrayList<>();
+    public List<MBabyEvent> last20Events() {
+        List<MBabyEvent> result = new ArrayList<>();
         result.addAll(this.getAll());
         // sort by inverse date
-        Comparator<BabyEvent> comp = new Comparator<BabyEvent>() {
+        Comparator<MBabyEvent> comp = new Comparator<MBabyEvent>() {
             @Override
-            public int compare(BabyEvent lhs, BabyEvent rhs) {
+            public int compare(MBabyEvent lhs, MBabyEvent rhs) {
                 return rhs.timestamp.compareTo(lhs.timestamp);
             }
         };
@@ -37,10 +37,10 @@ public class RepoBabyEvent extends RepoGSON<BabyEvent>{
         return result;
     }
 
-    public int numberOfEventsTodayFor(Baby baby) {
+    public int numberOfEventsTodayFor(MBaby baby) {
         int result = 0;
         for (UUID id : baby.eventsIDs){
-            BabyEvent event = this.getById(id);
+            MBabyEvent event = this.getById(id);
             // see if same date
             if (new DateTime(event.timestamp).withTimeAtStartOfDay().equals(DateTime.now().withTimeAtStartOfDay())){
                 result++;
@@ -49,10 +49,10 @@ public class RepoBabyEvent extends RepoGSON<BabyEvent>{
         return result;
     }
 
-    public BabyEvent lastEventFor(Baby baby) {
-        BabyEvent result = null;
+    public MBabyEvent lastEventFor(MBaby baby) {
+        MBabyEvent result = null;
         for (UUID id : baby.eventsIDs){
-            BabyEvent current = this.getById(id);
+            MBabyEvent current = this.getById(id);
             if (result == null) {
                 result = current;
                 continue;

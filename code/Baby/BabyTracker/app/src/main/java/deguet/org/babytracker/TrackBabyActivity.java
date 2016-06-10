@@ -8,8 +8,8 @@ import android.widget.Toast;
 
 public class TrackBabyActivity extends AppCompatActivity {
 
-    @Override public void onResume() { SingletonBus.guavaBus.register(this);     super.onResume();}
-    @Override public void onPause() {   SingletonBus.guavaBus.unregister(this);    super.onPause();}
+    @Override public void onResume() { SingletonBus.ottoBus.register(this);     super.onResume();}
+    @Override public void onPause() {   SingletonBus.ottoBus.unregister(this);    super.onPause();}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

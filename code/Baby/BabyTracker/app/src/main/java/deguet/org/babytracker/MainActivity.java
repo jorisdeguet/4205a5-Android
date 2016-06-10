@@ -1,6 +1,7 @@
 package deguet.org.babytracker;
 
 import android.content.Intent;
+import android.database.Observable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,22 +13,18 @@ import android.widget.Toast;
 
 import com.squareup.otto.Subscribe;
 
-import deguet.org.babytracker.model.User;
+import org.deguet.model.MUser;
+
 import deguet.org.babytracker.service.ServiceHTTP;
 import deguet.org.babytracker.ui.BabyListFragment;
 import deguet.org.babytracker.ui.events.BabySelected;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import rx.Observable;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-import rx.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
-    private User user;
+    private MUser user;
 
     @Override public void onResume() {
         //SingletonBus.guavaBus.register(this);
@@ -71,78 +68,6 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_rx) {
-
-            Observable<String> s = Observable.create(new Observable.OnSubscribe<String>() {
-
-                @Override
-                public void call(Subscriber<? super String> subscriber) {
-                    ServiceHTTP s = new ServiceHTTP();
-                    String res = s.test();
-                    subscriber.onNext(res);
-                    subscriber.onCompleted();
-                }
-            });
-            s.subscribeOn(Schedulers.newThread())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(new Subscriber<String>() {
-                        @Override
-                        public final void onCompleted() {
-                            SingletonBus.ottoBus.post("FINAL RX ");
-                        }
-
-                        @Override
-                        public final void onError(Throwable e) {
-                            Log.e("RxRx", e.getMessage());
-                        }
-
-                        @Override
-                        public final void onNext(String response) {
-                            SingletonBus.ottoBus.post("RX " + response);
-                        }
-                    });
-
-            return true;
-        }
-        if (id == R.id.action_retro) {
-            BabyRetrofit arh = new BabyRetrofit();
-            arh.service.geocode().enqueue(new Callback<String>() {
-                @Override
-                public void onResponse(Call<String> call, Response<String> response) {
-                    SingletonBus.ottoBus.post("Retro " + response.message() + " "+response.body());
-                }
-
-                @Override
-                public void onFailure(Call<String> call, Throwable t) {
-                    SingletonBus.ottoBus.post("Retro Error " + t.getMessage());
-                }
-            });
-            return true;
-        }
-        if (id == R.id.action_rx_retro) {
-            BabyRetrofit arh = new BabyRetrofit();
-            arh.service.test("2629 saint Zotique").subscribeOn(Schedulers.newThread())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(new Subscriber<String>() {
-                        @Override
-                        public final void onCompleted() {
-                            SingletonBus.ottoBus.post("FINAL RX + Retro ");
-                        }
-
-                        @Override
-                        public final void onError(Throwable e) {
-                            Toast.makeText(getApplicationContext(),"RX+Retro error :"+e,Toast.LENGTH_SHORT).show();
-                            Log.e("RxRx", e.getMessage());
-                        }
-
-                        @Override
-                        public final void onNext(String response) {
-                            SingletonBus.ottoBus.post("RX + Retro " + response);
-                        }
-                    });
-            return true;
-        }
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {

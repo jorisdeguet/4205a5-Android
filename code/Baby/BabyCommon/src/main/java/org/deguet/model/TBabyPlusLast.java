@@ -1,19 +1,17 @@
-package deguet.org.babytracker.transfer;
+package org.deguet.model;
 
 import java.util.UUID;
-
-import deguet.org.babytracker.model.BabyEvent;
 
 /**
  * Created by joris on 15-09-15.
  */
-public class BabyPlusLast {
+public class TBabyPlusLast {
 
     public String name;
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("BabyPlusLast{");
+        final StringBuilder sb = new StringBuilder("TBabyPlusLast{");
         sb.append("name='").append(name).append('\'');
         sb.append(", id=").append(id);
         sb.append(", last=").append(last);
@@ -24,7 +22,7 @@ public class BabyPlusLast {
 
     public UUID id; // used to go the page afterwards.
 
-    public BabyEvent last;
+    public MBabyEvent last;
 
     public int eventsInDay;
 

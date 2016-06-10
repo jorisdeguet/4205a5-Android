@@ -1,7 +1,7 @@
 package org.deguet.service;
 
-import org.deguet.model.NQPerson;
-import org.deguet.model.C2SSignUpRequest;
+import org.deguet.model.MUser;
+import org.deguet.model.TLoginPassword;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -61,11 +61,11 @@ public class ServiceForDev {
 			for (String l : last){
 				for (int i = 0 ; i < sizeBy100 ; i++){
 					try {
-						C2SSignUpRequest p = new C2SSignUpRequest();
+						TLoginPassword p = new TLoginPassword();
 						p.email = f + (i != 0 ? i + "" : "") + "@" + l + ".org";
 						p.password = "password";
 						//System.out.println(p);
-						NQPerson person = svote.signUp(p);
+						MUser person = svote.signUp(p);
 					}
 					catch (Exception e){
 

@@ -34,30 +34,6 @@
       <div class="navbar-collapse collapse navbar-right">
         <ul class="nav navbar-nav">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Semaines<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="s01.html">Semaine 1</a></li>
-              <li><a href="s02.html">Semaine 2</a></li>
-              <li class="divider"></li>
-              <li><a href="s03.html">Semaine 3</a></li>
-              <li><a href="s04.html">Semaine 4</a></li>
-              <li><a href="s05.html">Semaine 5</a></li>
-              <li><a href="s06.html">Semaine 6</a></li>
-              <li class="divider"></li>
-              <li><a href="s07.html">Semaine 7</a></li>
-              <li><a href="s08.html">Semaine 8</a></li>
-              <li class="divider"></li>
-              <li><a href="s09.html">Semaine 9</a></li>
-              <li><a href="s10.html">Semaine 10</a></li>
-              <li><a href="s11.html">Semaine 11</a></li>
-              <li><a href="s12.html">Semaine 12</a></li>
-              <li class="divider"></li>
-              <li><a href="s13.html">Semaine 13</a></li>
-              <li><a href="s14.html">Semaine 14</a></li>
-              <li><a href="s15.html">Semaine 15</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Travaux<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="phase1.html">Projet phase 1</a></li>
@@ -112,7 +88,7 @@
     <div class="row">
       <div class="">
         <h3>Organisation du cours</h3>
-        <div class="col-md-4 alert">
+        <div class="col-md-6 alert">
           <strong>Déroulement d'une semaine type</strong>
           <p>
             Chaque semaine, vous aurez du travail préparatoire pour découvrir la matière par vous-même.
@@ -129,7 +105,7 @@
             L'ensemble du travail demandé doit être fait pendant la période.
           </p>
         </div>
-        <div class="col-md-4 well">
+        <div class="col-md-6 well">
           <strong>Installation à la maison</strong>
           <p>
             À la maison, vous devez installer
@@ -137,28 +113,51 @@
             <a target="_blank" class="btn btn-primary btn-xs" href="https://www.jetbrains.com/idea/">Intellij IDEA</a>
           </p>
         </div>
-        <div class="col-md-4 alert ">
+        <div class="col-md-6 alert ">
           <strong>Votre propre application mobile</strong>
           <p>
             Vous devez développer votre propre application mobile au cours de la session.
             Les 3 phases du projet porteront sur cette application.
           </p>
-          <ol>
-            <li><a class="btn btn-primary btn-xs" href="s01.html">>></a> Plusieurs activités, librairies de support</li>
-            <li><a class="btn btn-primary btn-xs" href="s02.html">>></a> Mise en page et besoins de service</li>
-            <li><a class="btn btn-primary btn-xs" href="s03.html">>></a> Navigation</li>
-            <li><a class="btn btn-primary btn-xs" href="s04.html">>></a> Réseau et asynchronisme</li>
-            <li><a class="btn btn-primary btn-xs" href="s05.html">>></a> Intégration / GUI attente</li>
-            <li><a class="btn btn-primary btn-xs" href="s06.html">>></a> Intégration / révision</li>
-            <li><a class="btn btn-primary btn-xs" href="s07.html">>></a> Intra</li>
-            <li><a class="btn btn-primary btn-xs" href="s08.html">>></a> Sérialisation de données HTTP</li>
-            <li><a class="btn btn-primary btn-xs" href="s09.html">>></a> Serveur et web service en Java (nouvelle version Jersey)</li>
-            <li><a class="btn btn-primary btn-xs" href="s10.html">>></a> Mot de passe, token, cookie et sécurité</li>
-            <li><a class="btn btn-primary btn-xs" href="s11.html">>></a> Réseau et asynchronisme (bis) Retrofit et autres</li>
-            <li><a class="btn btn-primary btn-xs" href="s12.html">>></a> Intégration</li>
-            <li><a class="btn btn-primary btn-xs" href="s13.html">>></a> Portrait paysage</li>
-            <li><a class="btn btn-primary btn-xs" href="s14.html">>></a> Révisions</li>
-            <li><a class="btn btn-primary btn-xs" href="s15.html">>></a> Final</li>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+
+        <div class="col-md-12 alert ">
+          <strong>Semaine par semaine</strong>
+          <table class="table table-condensed">
+            <tr><td><a class="btn btn-primary btn-xs" href="s01.html">Plusieurs activités, librairies de support</a> </td>
+              <td rowspan="4"  class="alert alert-danger">
+                <a class="btn btn-primary btn-sm" href="phase1.html">Phase 1</a> :
+                Modèle, service, interface graphique et données dummy.
+              </td>
+            </tr>
+            <tr><td><a class="btn btn-primary btn-xs" href="s02.html">Mise en page et besoins de service</a></td></tr>
+            <tr><td><a class="btn btn-primary btn-xs" href="s03.html">Navigation</a></td></tr>
+            <tr><td><a class="btn btn-primary btn-xs" href="s04.html">Réseau et asynchronisme</a></td></tr>
+            <tr><td><a class="btn btn-primary btn-xs" href="s05.html">Intégration / GUI attente</a></td>
+              <td rowspan="5"  class="alert alert-danger">
+                <a class="btn btn-primary btn-sm" href="phase2.html">Phase 2</a> :
+                Implantation client-serveur pour un seul utilisateur
+              </td>
+            </tr>
+            <tr><td><a class="btn btn-primary btn-xs" href="s06.html">Intégration / révision</a></td></tr>
+            <tr><td><a class="btn btn-danger btn-xs" href="s07.html">Examen intra</a></td></tr>
+            <tr><td><a class="btn btn-primary btn-xs" href="s08.html">Sérialisation de données HTTP</a></td></tr>
+            <tr><td><a class="btn btn-primary btn-xs" href="s09.html">Serveur et web service en Java (nouvelle version Jersey)</a></td></tr>
+            <tr><td><a class="btn btn-primary btn-xs" href="s10.html">Mot de passe, token, cookie et sécurité</a></td>
+              <td rowspan="5" class="alert alert-danger">
+                <a class="btn btn-primary btn-sm" href="phase3.html">Phase 3</a> :
+                Multi-utilisateur et sécurité (token et https). Portrait / paysage.
+              </td>
+            </tr>
+            <tr><td><a class="btn btn-primary btn-xs" href="s11.html">Réseau et asynchronisme (bis) Retrofit et autres</a></td></tr>
+            <tr><td><a class="btn btn-primary btn-xs" href="s12.html">Intégration</a></td></tr>
+            <tr><td><a class="btn btn-primary btn-xs" href="s13.html">Portrait paysage</a></td></tr>
+            <tr><td><a class="btn btn-primary btn-xs" href="s14.html">Révisions correction phase 3</a></td></tr>
+            <tr><td><a class="btn btn-danger btn-xs" href="s15.html">Examen final</a></td></tr>
           </ol>
         </div>
       </div>

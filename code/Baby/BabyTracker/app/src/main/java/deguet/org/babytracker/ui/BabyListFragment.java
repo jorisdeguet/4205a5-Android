@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import org.deguet.model.TBabyPlusLast;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +19,6 @@ import java.util.UUID;
 
 import deguet.org.babytracker.SingletonBus;
 import deguet.org.babytracker.R;
-import deguet.org.babytracker.transfer.BabyPlusLast;
 import deguet.org.babytracker.ui.events.BabySelected;
 
 /**
@@ -25,15 +26,15 @@ import deguet.org.babytracker.ui.events.BabySelected;
  */
 public class BabyListFragment extends ListFragment {
 
-    private List<BabyPlusLast> list = new ArrayList<>();
+    private List<TBabyPlusLast> list = new ArrayList<>();
 
     private BabyListAdapter adapter;
 
-    @Override public void onResume() { SingletonBus.guavaBus.register(this);     super.onResume();}
-    @Override public void onPause() {   SingletonBus.guavaBus.unregister(this);    super.onPause();}
+    @Override public void onResume() { SingletonBus.ottoBus.register(this);     super.onResume();}
+    @Override public void onPause() {   SingletonBus.ottoBus.unregister(this);    super.onPause();}
 
-    public static class BabyListAdapter extends ArrayAdapter<BabyPlusLast>{
-        public BabyListAdapter(Context c, List<BabyPlusLast> list){
+    public static class BabyListAdapter extends ArrayAdapter<TBabyPlusLast>{
+        public BabyListAdapter(Context c, List<TBabyPlusLast> list){
             super(c, android.R.layout.simple_list_item_1, list);
         }
 
@@ -42,7 +43,7 @@ public class BabyListFragment extends ListFragment {
             //View v = super.getView(position, convertView, parent);
             LayoutInflater inflater = (LayoutInflater) getContext().getSystemService( Context.LAYOUT_INFLATER_SERVICE);
             View v = inflater.inflate(R.layout.baby_list_item, null);
-            BabyPlusLast bpl = getItem(position);
+            TBabyPlusLast bpl = getItem(position);
             TextView name = (TextView) v.findViewById(R.id.name); name.setText(bpl.name);
             TextView last = (TextView) v.findViewById(R.id.last);
             if (bpl.last == null){
@@ -68,11 +69,11 @@ public class BabyListFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         UUID uuid = list.get(position).id;
-        SingletonBus.guavaBus.post(new BabySelected(uuid));
+        SingletonBus.ottoBus.post(new BabySelected(uuid));
         super.onListItemClick(l, v, position, id);
     }
 
-    public void show(List<BabyPlusLast> babyPlusLasts) {
+    public void show(List<TBabyPlusLast> babyPlusLasts) {
         list.clear();
         list.addAll(babyPlusLasts);
         adapter.notifyDataSetChanged();

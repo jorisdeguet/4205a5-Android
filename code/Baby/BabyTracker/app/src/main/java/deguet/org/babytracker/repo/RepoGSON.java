@@ -5,14 +5,13 @@ import android.content.Context;
 import com.google.gson.Gson;
 
 import org.apache.commons.io.FileUtils;
+import org.deguet.model.Identifiable;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-
-import deguet.org.babytracker.model.Identifiable;
 
 /**
  * Created by joris on 15-09-15.
@@ -57,19 +56,19 @@ public class RepoGSON<T extends Identifiable> {
         this.deleteOne(this.getById(id));
     }
 
-    public UUID save(T a) {
+    public String save(T a) {
         synchronized (classe) {
             // set the id
-            if (a.id == null) a.id = this.nextAvailableId();
+            if (a.getId() == null) a.setId(this.nextAvailableId());
             //
             String serialise = gson.toJson(a);
             File base = context.getFilesDir();
             try {
-                FileUtils.writeStringToFile(new File(base, a.id+extension), serialise);
+                FileUtils.writeStringToFile(new File(base, a.getId()+extension), serialise);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            return a.id;
+            return a.getId();
 
         }
     }
@@ -105,7 +104,7 @@ public class RepoGSON<T extends Identifiable> {
     public void deleteOne(T a) {
         synchronized (classe) {
             File base = context.getFilesDir();
-            File f = new File(base, a.id+extension);
+            File f = new File(base, a.getId()+extension);
             f.delete();
         }
     }
@@ -117,8 +116,8 @@ public class RepoGSON<T extends Identifiable> {
 
     // autre methodes hors acces aux donnees pour la gestion.
 
-    private UUID nextAvailableId(){
-        return UUID.randomUUID();
+    private String nextAvailableId(){
+        return UUID.randomUUID().toString();
     }
 
     private void deleteStorage(){
