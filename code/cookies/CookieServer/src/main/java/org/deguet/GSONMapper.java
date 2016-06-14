@@ -38,13 +38,11 @@ public class GSONMapper  implements
         return gson;
     }
 
-    @Override
     public boolean isReadable(Class<?> type, Type genericType,
                               java.lang.annotation.Annotation[] annotations, MediaType mediaType) {
         return true;
     }
 
-    @Override
     public Object readFrom(Class<Object> type, Type genericType, Annotation[] annotations, MediaType mediaType, MultivaluedMap<String, String> httpHeaders, InputStream entityStream)
             throws IOException{
         InputStreamReader streamReader = null;
@@ -65,17 +63,17 @@ public class GSONMapper  implements
         return null;
     }
 
-    @Override
+
     public boolean isWriteable(Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType) {
         return true;
     }
 
-    @Override
+
     public long getSize(Object object, Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType) {
         return -1;
     }
 
-    @Override
+
     public void writeTo(Object object, Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType, MultivaluedMap<String, Object> httpHeaders, OutputStream entityStream)
             throws IOException, WebApplicationException {
         OutputStreamWriter writer = new OutputStreamWriter(entityStream, UTF_8);
