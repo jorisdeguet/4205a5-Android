@@ -88,15 +88,29 @@
 
     <div class="row">
       <div class="">
-        <h3 id="s10">Semaine 10 : accès HTTP et asynchronisme</h3>
+        <h3 id="s10">Semaine 10 : mot de passe, token, cookie et sécurité</h3>
         <div class="col-md-12 alert alert-danger">
           <strong>Évaluations</strong>
           <p>
-
+            La phase 2 sera corrigée cette semaine pendant la séance de laboratoire.
           </p>
         </div>
         <div class="col-md-4 alert alert-success">
           <strong>Avant la séance (2h)</strong>
+          <p>
+            Faites une recherche sur comment effectuer un hash avec l'algorithme SHA256 d'une String
+            en Java. Faites un petit projet de démontration.
+          </p>
+          <p>
+            Regardez les videos suivantes:
+            <iframe width="200" height="113" src="https://www.youtube.com/embed/JFkRbsFI6KQ?list=PLYHAgLf_cnWSzWuVuasFEe-z_ViOpkMfV" frameborder="0" allowfullscreen></iframe>
+            <iframe width="200" height="113" src="https://www.youtube.com/embed/HD7igpxxw7w?list=PLYHAgLf_cnWSzWuVuasFEe-z_ViOpkMfV" frameborder="0" allowfullscreen></iframe>
+          </p>
+          <p>
+            Vous trouverez également des exemples client-serveur pour
+            <a class="btn btn-xs btn-warning" href="code/https/">https</a> et les
+            <a class="btn btn-xs btn-warning" href="code/cookies/">cookies</a>.
+          </p>
         </div>
         <div class="col-md-4 alert alert-warning">
           <strong>Pendant la séance en classe</strong>
@@ -107,7 +121,12 @@
         <div class="col-md-4 alert alert-info">
           <strong>Pendant la séance de laboratoire</strong>
           <p>
-
+            J'effectuerai la correction en classe de la phase 2 de votre projet. Assurez-vous de
+            regarder les conditions de correction décrites dans l'énoncé.
+          </p>
+          <p>
+            Vous devrez commencer à regarder la phase 3 du projet et vous devez mettre en place
+            les améliorations de sécurité exigées.
           </p>
         </div>
         <div class="col-md-12 well">
@@ -118,7 +137,14 @@
             <div class="collapse" id="e10">
               <h3>Exercice A</h3>
               <p>
-                Plop appelé <strong>simpsons.html</strong>.
+                Mettez en place un projet contenant un serveur HTTPS démarrant sur le port 7654.
+                Le serveur doit fournir un service web avec une méthode GET sur l'URL "/api/jourdaujourdhui/{annee}".
+                Le service doit renvoyer le jour de la semaine en français (lundi mardi ...) de la date d'aujourd'hui
+                mais dans l'année spécifiée en paramètre.
+              </p>
+              <p>
+                Exemple : si nous sommes le 10 octobre 2000 et qu'on appelle le service avec <strong>annee</strong> qui
+                vaut 1981, le service doit répondre "samedi".
               </p>
               <h3>Exercice B</h3>
               <p>
@@ -129,7 +155,7 @@
         </div>
       </div>
     </div>
-  
+
     <script src="bootstrap/jquery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>

@@ -89,7 +89,7 @@
 
     <div class="row">
       <div class="">
-        <h3 id="s8">Semaine 8: serveur applicatif HTTP en Java, Jersey et web services</h3>
+        <h3 id="s8">Semaine 8: JSON, Gson et structure du projet</h3>
         <div class="col-md-12 alert alert-danger">
           <strong>Évaluations</strong>
           <p>
@@ -99,21 +99,30 @@
         <div class="col-md-4 alert alert-success">
           <strong>Avant la séance (2h)</strong>
           <p>
-            Voir la video de suivante de mise en place d'un
-            <a class="btn btn-xs btn-primary" href="https://www.youtube.com/watch?v=zARLIFowBiA" >
-              service web
-            </a> (Maven, Tomcat7, Jersey)
+            Voir l'exemple de sérialisation Gson modifiée ici
+            <a class="btn btn-xs btn-primary" href="code/gson-custom/">Gson custom</a>.
           </p>
           <p>
-            Voir l'exemple de serveur dans
-            <a class="btn btn-xs btn-primary" href="code/Baby/BabyServer/">Baby, le serveur</a>
+            Regardez également la
+            <a class="btn btn-xs btn-primary" href="https://github.com/google/gson/blob/master/UserGuide.md#TOC-Custom-Serialization-and-Deserialization">doc de Gson</a>.
+          </p>
+          <p>
+            Côté client, vous devez faire une recherche sur comment passer un Gson modifié à Retrofit.
+          </p>
+          <p>
+            Côté client, vous devez faire une recherche sur comment passer un Gson modifié à Jersey.
           </p>
         </div>
         <div class="col-md-4 alert alert-warning">
           <strong>Pendant la séance</strong>
           <p>
-
+            On fera une capsule sur la structure de votre projet pour permettre de partager entre
+            le serveur et le client les classes suivantes:
           </p>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
         <div class="col-md-4 alert alert-info">
           <strong>Pendant la séance</strong>
@@ -129,11 +138,22 @@
             <div class="collapse" id="e08">
               <h3>Exercice A</h3>
               <p>
-                Plop appelé <strong>simpsons.html</strong>.
+                Créez un Gson modifié permettant de (dé)sérialiser un DateTime en le
+                représentant comme le nombre de millisecondes depuis l'EPOCH.
+                Vous devez également vous assurer que le <em>pretty printing</em>
+                est activé.
+                Codez les tests unitaires permettant de valider le fonctionnement.
               </p>
               <h3>Exercice B</h3>
               <p>
-                yo.
+                Essayez de sérialiser avec Gson une classe User qui contient un champ
+                <pre>
+class User {
+  List&lt;User&gt; friends;
+}
+                </pre>
+                Faites plusieurs tests pour valider le fonctionnement. Essayez de trouver
+                un cas problématique.
               </p>
             </div>
           </div>
@@ -141,7 +161,7 @@
       </div>
     </div>
 
-    
+
     <script src="bootstrap/jquery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
