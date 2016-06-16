@@ -95,44 +95,41 @@
         </div>
         <div class="col-md-4 alert">
           <strong>Avant la séance</strong>
-          <p>
-            Pensez à apporter votre ordinateur si vous voulez vérifier votre installation.
-          </p>
+
           <p>
             Révisez la programmation Android de base avec la video:
-            <a class="btn btn-primary btn-xs" href="https://youtu.be/tkSaWvoX4Wo">Tape le lapin</a>.
           </p>
+          <p><iframe width="200" height="150" src="https://www.youtube.com/embed/tkSaWvoX4Wo" frameborder="0" allowfullscreen></iframe></p>
           <p>
             Regardez les videos suivantes:
-            <iframe width="200" height="150" src="https://www.youtube.com/embed/7dneldqxDKk" frameborder="0" allowfullscreen></iframe>
-            <iframe width="200" height="150" src="https://www.youtube.com/embed/768kpYaOZr0" frameborder="0" allowfullscreen></iframe>
           </p>
+          <p><iframe width="200" height="150" src="https://www.youtube.com/embed/7dneldqxDKk" frameborder="0" allowfullscreen></iframe></p>
+          <p><iframe width="200" height="150" src="https://www.youtube.com/embed/768kpYaOZr0" frameborder="0" allowfullscreen></iframe></p>
+
         </div>
         <div class="col-md-4 alert  alert-warning">
-          <strong>Pendant la séance en classe</strong>
+          <strong>Pendant la séance en classe (par équipe de 2)</strong>
           <p>
-            Nous essaierons de dessiner l'ensemble de l'application à faire,
-            son architecture et voir comment on va pouvoir la mettre en place.
+            Nous discuterons de l'ensemble de l'application et de comment nous allons
+            procéder.
             (identifier l'utilisateur, partager les classes de code communes etc.)
           </p>
-          <p>
-            Nous reviendrons sur la création d'un projet et d'activités.
-          </p>
-          <p>
-            Il y aura une capsule sur:
-            <ul>
-              <li>la différence entre AppcompatActivity et Activity</li>
-              <li>les librairies de support et les noms de classe</li>
-              <li>un exemple de Dialog en mode support</li>
-            </ul>
-            Exercices sur le mise en page avec LinearLayout
-          </p>
 
+          <a href="utils/overview.png"><img src="utils/overview.png" style="width:100%"/></a>
+          <p>
+            Nous reviendrons sur la création d'un projet et d'activités comme vu dans les vidéos.
+          </p>
+          <p>
+            Nous passerons à travers les énoncés des 3 phases du projet.
+          </p>
         </div>
         <div class="col-md-4 alert alert-info">
           <strong>Pendant la séance en laboratoire</strong>
           <p>
-            Vous devrez compléter les exercices.
+            Vous pouvez apporter votre ordinateur si vous voulez vérifier votre installation.
+          </p>
+          <p>
+            Vous devrez compléter les exercices de la semaine.
           </p>
           <p>
             Commencez votre projet en lui donnant le nom de votre application.
@@ -147,6 +144,30 @@
           <p>
             Créez un Android Virtual Device avec l'API 15 et testez votre application
           </p>
+        </div>
+        <div class="col-md-12 well">
+          <div>
+            <strong>Exercices de la semaine</strong>
+            <div >
+              <h3>Exercice A</h3>
+              <p>
+                Créez un projet appelé <strong>MultiMulti</strong> contenant 3 activités compatibles avec l'API 8.
+                Ajoutez un menu d'options dans le ActionBar (révisions) permettant d'accéder à chacune des activités
+                depuis chacune des activités.
+              </p>
+              <h3>Exercice B</h3>
+              <p>
+                Créez un projet appelé <strong>CommunicationsIntra</strong> contenant 1 seule activité.
+                Ajoutez un bouton et un ListFragment (faites une recherche pour un exemple).
+                Ensuite assurez vous de faire communiquer l'activité et le fragment des façons suivantes:
+              </p>
+              <ul>
+                <li>Quand on appuie sur le bouton de l'activité, cela rajoute un élément au début de la liste du ListFragment</li>
+                <li>Quand on appuie sur un élément de la liste, cet élément est communiqué à l'activité</li>
+              </ul>
+              Il est fortement recommandé d'utiliser un bus d'événements (Otto par exemple)
+            </div>
+          </div>
         </div>
       </div>
     </div>
