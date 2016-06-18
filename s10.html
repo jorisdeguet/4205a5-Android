@@ -42,34 +42,6 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Videos<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="https://www.youtube.com/watch?v=r9lYkNauGMg&list=PLYHAgLf_cnWQccEbrvVCJksLSfc5f0nR_">Liste de lecture Java</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Architecture</li>
-              <li><a href="">Modèle et service</a></li>
-              <li><a href="">Activités et bus d'événements</a></li>
-
-              <li class="divider"></li>
-              <li class="dropdown-header">Interface graphique</li>
-              <li><a href="https://youtu.be/tkSaWvoX4Wo">Tape le lapin</a></li>
-              <li><a href="https://youtu.be/xUfl8cSVi7s">Premier projet Android Studio</a></li>
-              <li><a href="">Mise en page avec LinearLayout</a></li>
-              <li><a href="">Navigation et drawer</a></li>
-              <li><a href="">Interface adaptive</a></li>
-
-              <li class="divider"></li>
-              <li class="dropdown-header">Asynchronisme et réseau</li>
-              <li><a href="https://youtu.be/IRgYZzYTUT0">Web service avec Jersey</a></li>
-              <li><a href="https://youtu.be/x-dQ5Sa0Ns0">Stockage avec Hibernate</a></li>
-
-              <li class="divider"></li>
-              <li class="dropdown-header">Serveur et web services</li>
-              <li><a href="https://youtu.be/IRgYZzYTUT0">Web service avec Jersey</a></li>
-              <li><a href="">Autentification, token et cookie</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Utiles<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="">Plan de cours</a></li>
@@ -98,8 +70,8 @@
         <div class="col-md-4 alert alert-success">
           <strong>Avant la séance (2h)</strong>
           <p>
-            Faites une recherche sur comment effectuer un hash avec l'algorithme SHA256 d'une String
-            en Java. Faites un petit projet de démontration.
+            Faites une recherche sur comment effectuer un hash d'une String
+            en Java (avec l'algorithme SHA256). Faites un petit projet de démontration.
           </p>
           <p>
             Regardez les videos suivantes:
@@ -115,7 +87,7 @@
         <div class="col-md-4 alert alert-warning">
           <strong>Pendant la séance en classe</strong>
           <p>
-
+            Nous discuterons des différentes attaques possible en terme de sécurité et des réponses à apporter.
           </p>
         </div>
         <div class="col-md-4 alert alert-info">
@@ -125,19 +97,22 @@
             regarder les conditions de correction décrites dans l'énoncé.
           </p>
           <p>
+            Vous devez compléter les exercices.
+          </p>
+          <p>
             Vous devrez commencer à regarder la phase 3 du projet et vous devez mettre en place
             les améliorations de sécurité exigées.
           </p>
         </div>
         <div class="col-md-12 well">
           <div>
-            <a class="btn btn-primary btn-xs" role="button" data-toggle="collapse" href="#e10" aria-expanded="false" aria-controls="collapseExample">
-              Exercices de la semaine <span class="caret"></span>
+            <a class="btn btn-primary btn-xs" >
+              Exercices de la semaine
             </a>
-            <div class="collapse" id="e10">
+            <div >
               <h3>Exercice A</h3>
               <p>
-                Mettez en place un projet contenant un serveur HTTPS démarrant sur le port 7654.
+                Mettez en place un projet <strong>JourHTTPS</strong> contenant un serveur HTTPS démarrant sur le port 7654.
                 Le serveur doit fournir un service web avec une méthode GET sur l'URL "/api/jourdaujourdhui/{annee}".
                 Le service doit renvoyer le jour de la semaine en français (lundi mardi ...) de la date d'aujourd'hui
                 mais dans l'année spécifiée en paramètre.
@@ -148,7 +123,11 @@
               </p>
               <h3>Exercice B</h3>
               <p>
-                yo.
+                Mettez en place un projet <strong>JourCookie</strong>. Assurez vous que le service répond uniquement
+                si un cookie du serveur est présent.
+              </p>
+              <p>
+                Créez 2 méthodes supplémentaires pour installer le cookie "/api/cookie/on" et le supprimer "/api/cookie/off".
               </p>
             </div>
           </div>

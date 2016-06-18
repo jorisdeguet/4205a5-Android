@@ -43,34 +43,6 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Videos<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="https://www.youtube.com/watch?v=r9lYkNauGMg&list=PLYHAgLf_cnWQccEbrvVCJksLSfc5f0nR_">Liste de lecture Java</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Architecture</li>
-              <li><a href="">Modèle et service</a></li>
-              <li><a href="">Activités et bus d'événements</a></li>
-
-              <li class="divider"></li>
-              <li class="dropdown-header">Interface graphique</li>
-              <li><a href="https://youtu.be/tkSaWvoX4Wo">Tape le lapin</a></li>
-              <li><a href="https://youtu.be/xUfl8cSVi7s">Premier projet Android Studio</a></li>
-              <li><a href="">Mise en page avec LinearLayout</a></li>
-              <li><a href="">Navigation et drawer</a></li>
-              <li><a href="">Interface adaptive</a></li>
-
-              <li class="divider"></li>
-              <li class="dropdown-header">Asynchronisme et réseau</li>
-              <li><a href="https://youtu.be/IRgYZzYTUT0">Web service avec Jersey</a></li>
-              <li><a href="https://youtu.be/x-dQ5Sa0Ns0">Stockage avec Hibernate</a></li>
-
-              <li class="divider"></li>
-              <li class="dropdown-header">Serveur et web services</li>
-              <li><a href="https://youtu.be/IRgYZzYTUT0">Web service avec Jersey</a></li>
-              <li><a href="">Autentification, token et cookie</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Utiles<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="">Plan de cours</a></li>
@@ -114,31 +86,42 @@
           </p>
         </div>
         <div class="col-md-4 alert alert-warning">
-          <strong>Pendant la séance</strong>
+          <strong>Pendant la séance en classe</strong>
           <p>
             On fera une capsule sur la structure de votre projet pour permettre de partager entre
             le serveur et le client les classes suivantes:
           </p>
           <ul>
-            <li></li>
-            <li></li>
+            <li>classes de modèle</li>
+            <li>classes de transfert</li>
+            <li>sérialisation modifiée si nécessaire</li>
           </ul>
+          <p>
+            Nous verrons comment utiliser Maven pour installer un projet (une librairie) localement et
+            l'utiliser dans un autre projet.
+          </p>
+          <p>
+            Nous verrons comment intégrer le repository local de Maven dans un projet Gradle et comment
+            établir une dépendance vers notre librairie locale partagée.
+          </p>
         </div>
         <div class="col-md-4 alert alert-info">
-          <strong>Pendant la séance</strong>
+          <strong>Pendant la séance de laboratoire</strong>
           <p>
-
+            Vous devrez implanter la structure globale de votre projet incluant votre
+            application Android, votre serveur Java et éventuellement une librairie de
+            classes communes.
           </p>
         </div>
         <div class="col-md-12 well">
           <div>
-            <a class="btn btn-primary btn-xs" role="button" data-toggle="collapse" href="#e08" aria-expanded="false" aria-controls="collapseExample">
-              Exercices de la semaine <span class="caret"></span>
+            <a class="btn btn-primary btn-xs" >
+              Exercices de la semaine
             </a>
-            <div class="collapse" id="e08">
+            <div >
               <h3>Exercice A</h3>
               <p>
-                Créez un Gson modifié permettant de (dé)sérialiser un DateTime en le
+                Créez dans un projet <strong>GsonDateTime</strong> un Gson modifié permettant de (dé)sérialiser un DateTime en le
                 représentant comme le nombre de millisecondes depuis l'EPOCH.
                 Vous devez également vous assurer que le <em>pretty printing</em>
                 est activé.
@@ -146,6 +129,7 @@
               </p>
               <h3>Exercice B</h3>
               <p>
+                Créez dans un projet <strong>GsonUser</strong>.
                 Essayez de sérialiser avec Gson une classe User qui contient un champ
                 <pre>
 class User {
