@@ -34,7 +34,7 @@
         </div>
         <div class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li><a href="mobile.html">Page du cours</a></li>
+            <li><a href="index.html">Page du cours</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Utiles<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -85,10 +85,12 @@
               <p>
                 Pendant la phase 1, vous devez
                 <ul>
-                  <li>Définir les activités de votre application et leur mise en page</li>
-                  <li>Définir le modèle nécessaire pour votre application</li>
-                  <li>Définir un service retrofit2 correspondant aux besoins de l'application</li>
+                  <li>Définir les activités de votre application</li>
+                  <li>Mise en page</li>
+                  <li>Modèle</li>
+                  <li>Service retrofit2</li>
                   <li>Fournir une implémentation mock de ce service</li>
+                  <li>Navigation avec Drawer</li>
                 </ul>
               </p>
             </div>
@@ -98,15 +100,17 @@
         <div class="">
             <h3>
               <span class="label label-success">1 points</span>
-              Modèle de données
+              Activités et mise en page
             </h3>
             <div class="col-md-6 alert ">
               <strong>Structure de votre projet</strong>
               <p>
               </p>
               <ul>
-                <li>Au moins 3 entités</li>
-                <li>Utilisent un identifiant</li>
+                <li>Écran de connexion / inscription</li>
+                <li>Écran d'accueil et/ou d'affichage de liste</li>
+                <li>Écran de consultation d'un objet</li>
+                <li>Interface (activité, dialogue etc.) de création d'objet</li>
               </ul>
 
             </div>
@@ -124,46 +128,40 @@
         </div>
         <div class="row well">
           <div class="">
-              <h3>
-                <span class="label label-success">4 points</span>
-                Dessins d'interfaces
-              </h3>
-              <div class="col-md-6 alert ">
-                <strong>Écrans de l'interface</strong>
-                <p>
-                  Vous devez au minimum dessiner les interfaces suivantes
-                </p>
-                <ul>
-                  <li>Écran de connexion / inscription</li>
-                  <li>Écran d'accueil et/ou d'affichage de liste</li>
-                  <li>Écran de consultation d'un objet</li>
-                  <li>Interface (activité, dialogue etc.) de création d'objet</li>
-                </ul>
-
-              </div>
-
-              <div class="col-md-6 alert alert-info">
-                <strong>Pointage</strong>
-                <ul>
-                    <li>Aucune structure : un seul fichier ou aucun respect des noms</li>
-                    <li>Structure partiellement respectée</li>
-                    <li>Structure identique à la demande/</li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        <div class="row well">
-          <div class="">
             <h3>
               <span class="label label-success">4 points</span>
-              Schémas pour les écrans de l'application
+              Modèle
             </h3>
             <div class="col-md-6 alert">
               <strong>Dessins des différents écrans</strong>
               <p>
                 Vous devez dessiner (à la main ou logiciel) au moins 4 écrans de votre application
                 en mode portrait.
+              </p>
+            </div>
+
+            <div class="col-md-6 alert alert-info">
+              <strong>Pointage</strong>
+              <ul>
+                <li>1 point : le modèle contient les classes nécessaires</li>
+                <li>1 point : aucun champ n'a été oublié</li>
+                <li>1 point : déclaration encodage</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row well">
+          <div class="">
+            <h3>
+              <span class="label label-success">3 points</span>
+              Service Retrofit
+            </h3>
+            <div class="col-md-6 alert">
+              <strong>Identification du service</strong>
+              <p>
+                Vous devez identifier les différentes actions permises par votre service en fonction des
+                écrans prévus dans votre application. Chaque bouton ou affichage de données
+                est a priori un besoin en terme de service.
               </p>
             </div>
 
@@ -181,13 +179,14 @@
           <div class="">
             <h3>
               <span class="label label-success">3 points</span>
-              Service et logique applicative
+              Mock retrofit
             </h3>
             <div class="col-md-6 alert">
-              <strong>Structure de la balise head</strong>
+              <strong>Fonctionnel sans serveur</strong>
               <p>
-                Vous devez identifier les différentes actions permises par votre service en fonction des
-                écrans prévus dans votre application.
+                Vous devez fournir une implantation Mock du service pour pouvoir
+                faire la démonstration de votre application fonctionnel même sans
+                avoir l'implantation du serveur
               </p>
             </div>
 
@@ -201,22 +200,29 @@
             </div>
           </div>
         </div>
-
-        <div class="row">
+        <div class="row well">
           <div class="">
-            <div class="col-md-12 alert alert-info">
-                <h1>TODO inSERER LE RENDU DE LA PAGE A LA FIN</h1>
-
+            <h3>
+              <span class="label label-success">3 points</span>
+              Navigation entre activités
+            </h3>
+            <div class="col-md-6 alert">
+              <strong>Structure de la balise head</strong>
+              <p>
+                Vous devez avoir un drawer de navigation.
+              </p>
             </div>
-            <div class="col-md-12 alert alert-danger">
-                <h1>Assurez vous d'avoir indenté votre fichier correctement (sinon 0)</h1>
-                <h1>Assurez vous que votre page passe le validateur  (sinon 0)</h1>
-            </div>
 
+            <div class="col-md-6 alert alert-info">
+              <strong>Pointage</strong>
+              <ul>
+                <li>3 points : tiroir de navigation présent dans chaque activités appropriée avec liens fonctionnels</li>
+                <li>3 points : Hamburger fonctionnel</li>
+                <li>1 point : déclaration encodage</li>
+              </ul>
+            </div>
           </div>
         </div>
-
-
       </div>
 
     <!-- Bootstrap core JavaScript

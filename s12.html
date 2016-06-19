@@ -33,41 +33,12 @@
       </div>
       <div class="navbar-collapse collapse navbar-right">
         <ul class="nav navbar-nav">
-
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Travaux<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="phase1.html">Projet phase 1</a></li>
               <li><a href="phase2.html">Projet phase 2</a></li>
               <li><a href="phase3.html">Projet phase 3</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Videos<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="https://www.youtube.com/watch?v=r9lYkNauGMg&list=PLYHAgLf_cnWQccEbrvVCJksLSfc5f0nR_">Liste de lecture Java</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Architecture</li>
-              <li><a href="">Modèle et service</a></li>
-              <li><a href="">Activités et bus d'événements</a></li>
-
-              <li class="divider"></li>
-              <li class="dropdown-header">Interface graphique</li>
-              <li><a href="https://youtu.be/tkSaWvoX4Wo">Tape le lapin</a></li>
-              <li><a href="https://youtu.be/xUfl8cSVi7s">Premier projet Android Studio</a></li>
-              <li><a href="">Mise en page avec LinearLayout</a></li>
-              <li><a href="">Navigation et drawer</a></li>
-              <li><a href="">Interface adaptive</a></li>
-
-              <li class="divider"></li>
-              <li class="dropdown-header">Asynchronisme et réseau</li>
-              <li><a href="https://youtu.be/IRgYZzYTUT0">Web service avec Jersey</a></li>
-              <li><a href="https://youtu.be/x-dQ5Sa0Ns0">Stockage avec Hibernate</a></li>
-
-              <li class="divider"></li>
-              <li class="dropdown-header">Serveur et web services</li>
-              <li><a href="https://youtu.be/IRgYZzYTUT0">Web service avec Jersey</a></li>
-              <li><a href="">Autentification, token et cookie</a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -86,56 +57,93 @@
 
   <div class="container">
 
-
     <div class="row">
       <div class="">
-        <h3 id="s12">Semaine 12 : Intégration de l'authentification</h3>
+        <h3 id="s13">Semaine 12 : interface adaptive, mode portrait et paysage</h3>
         <div class="col-md-12 alert alert-danger">
           <strong>Évaluations</strong>
           <p>
-
+            La phase 3 du projet est en cours.
           </p>
         </div>
         <div class="col-md-4 alert alert-success">
           <strong>Avant la séance (2h)</strong>
           <p>
-            Lisez la page sur <a href="http://developer.android.com/training/volley/index.html">volley</a>.
-
+            Regardez l'exemple et en enlevant des morceaux de code, identifiez quels
+            sont les éléments essentiels au bon fonctionnement.
           </p>
-          Volley
+          <p>
+            Essayez de mettre en oeuvre les étapes suivantes
+          </p>
+          <ul>
+            <li>
+              <span class="label label-primary">Layout</span>
+              Créez 2 layouts avec le même nom, un par défaut et un pour le mode paysage.
+              Ajouter un TextView avec une couleur de fond dans celui pour paysage.
+              Testez en tournant la tablette pour voir si le layout change.
+            </li>
+            <li>
+              <span class="label label-primary">Layout</span>
+              Ajouter le éléments nécessaire pour remplacer le TextView dans le layout
+              paysage
+            </li>
+            <li>
+              <span class="label label-success">Code</span>
+              Calculer une variable indiquant le mode dans le onCreate de l'Activity.
+              Afficher le dans un Toast ou un Log et testez.
+            </li>
+            <li>
+              <span class="label label-success">Code</span>
+              Insérez un <strong>if</strong> dans chaque morceau de code réagissant à la
+              partie commune. Vous devrez effectuer l'action appropriée pour
+              <ul>
+                <li>mode portrait : partir une autre activité en lui passant ce qu'il faut</li>
+                <li>mode paysage : mettre à jour l'information dans la partie exclusive paysage</li>
+              </ul>
+            </li>
+          </ul>
         </div>
         <div class="col-md-4 alert alert-warning">
           <strong>Pendant la séance en classe</strong>
           <p>
-
+            Démonstration de création étape par étape d'une interface adaptive.
           </p>
         </div>
         <div class="col-md-4 alert alert-info">
           <strong>Pendant la séance de laboratoire</strong>
           <p>
-
+            Vous devrez compléter la programmation de votre activité qui gère
+            des interfaces différentes en portrait / paysage.
           </p>
         </div>
         <div class="col-md-12 well">
           <div>
-            <a class="btn btn-primary btn-xs" role="button" data-toggle="collapse" href="#e12" aria-expanded="false" aria-controls="collapseExample">
-              Exercices de la semaine <span class="caret"></span>
+            <a class="btn btn-primary btn-xs">
+              Exercices de la semaine
             </a>
-            <div class="collapse" id="e12">
+            <div >
               <h3>Exercice A</h3>
               <p>
-                Plop appelé <strong>simpsons.html</strong>.
+                Créez un projet appelé <strong>GrisGris</strong>. Vous devez reproduire le layout suivant en
+                mode paysage. En mode portrait, uniquement la liste de gauche doit apparaitre.
               </p>
+              <img src="images/griss.jpg" style="width:100%;" />
               <h3>Exercice B</h3>
               <p>
-                yo.
+                Créez un projet appelé <strong>GrisGrisFini</strong> en faisant une copie du projet précédent.
+              </p>
+              <p>
+                En mode portrait, appuyer sur un gris doit faire apparaitre une autre activité avec
+                une vue du même gris.
+                En mode paysage, appuyer sur un gris dans la liste doit changer la couleur de la partie
+                droite.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <script src="bootstrap/jquery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
