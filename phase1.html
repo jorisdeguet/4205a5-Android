@@ -99,17 +99,18 @@
       <div class="row well">
         <div class="">
             <h3>
-              <span class="label label-success">1 points</span>
+              <span class="label label-success">4 points</span>
               Activités et mise en page
             </h3>
             <div class="col-md-6 alert ">
-              <strong>Structure de votre projet</strong>
+              <strong>Activités</strong>
               <p>
+                Vous devez programmer les activités suivantes au minimum:
               </p>
               <ul>
-                <li>Écran de connexion / inscription</li>
-                <li>Écran d'accueil et/ou d'affichage de liste</li>
-                <li>Écran de consultation d'un objet</li>
+                <li>Écran de connexion et inscription</li>
+                <li>Écran d'accueil et d'affichage de liste</li>
+                <li>Écran de consultation d'un objet en détail</li>
                 <li>Interface (activité, dialogue etc.) de création d'objet</li>
               </ul>
 
@@ -117,11 +118,9 @@
 
             <div class="col-md-6 alert alert-info">
               <strong>Pointage</strong>
-              <ol start="0">
-                  <li>Aucune structure : un seul fichier ou aucun respect des noms</li>
-                  <li>Structure partiellement respectée</li>
-                  <li>Structure identique à la demande/</li>
-              </ol>
+              <ul>
+                <li><span class="label label-success">4 points</span> 4 activités existent et sont mises en page</li>
+              </ul>
             </div>
 
           </div>
@@ -129,23 +128,28 @@
         <div class="row well">
           <div class="">
             <h3>
-              <span class="label label-success">4 points</span>
+              <span class="label label-success">6 points</span>
               Modèle
             </h3>
             <div class="col-md-6 alert">
-              <strong>Dessins des différents écrans</strong>
+              <strong>Besoins de modélisation</strong>
               <p>
-                Vous devez dessiner (à la main ou logiciel) au moins 4 écrans de votre application
-                en mode portrait.
+                Vous devez modéliser au minimum les utilisateurs (au moins un identifiant et un mot de passe)
+                ainsi qu'une entité que vous gérez (selon votre application). Cette entité doit représenter au
+                moins 3 champs de données en plus de l'identifiant.
+              </p>
+              <p>
+                Vous devez modéliser tous les besoins qui découlent de votre interface graphique. Si le
+                professeur identifie des informations non représentées ou représentées en double, vous
+                perdrez des points.
               </p>
             </div>
 
             <div class="col-md-6 alert alert-info">
               <strong>Pointage</strong>
               <ul>
-                <li>1 point : le modèle contient les classes nécessaires</li>
-                <li>1 point : aucun champ n'a été oublié</li>
-                <li>1 point : déclaration encodage</li>
+                <li><span class="label label-success">2 points</span> modélisation minimum atteinte </li>
+                <li><span class="label label-success">4 points</span> pas d'oublis ou de doublons </li>
               </ul>
             </div>
           </div>
@@ -153,8 +157,8 @@
         <div class="row well">
           <div class="">
             <h3>
-              <span class="label label-success">3 points</span>
-              Service Retrofit
+              <span class="label label-success">6 points</span>
+              Service et Retrofit
             </h3>
             <div class="col-md-6 alert">
               <strong>Identification du service</strong>
@@ -163,14 +167,23 @@
                 écrans prévus dans votre application. Chaque bouton ou affichage de données
                 est a priori un besoin en terme de service.
               </p>
+              <p>
+                Vous devez atteindre le minimum soit la gestion des utilisateurs (création de compte, connexion
+                et déconnexion) ainsi que la gestion d'une entité de données (création, récupération d'une liste,
+                récupération d'une entité).
+              </p>
+              <p>
+                Vous devez déterminer toutes les méthodes qui découlent de votre interface graphique. Si le
+                professeur identifie des méthodes manquantes, vous
+                perdrez des points.
+              </p>
             </div>
 
             <div class="col-md-6 alert alert-info">
               <strong>Pointage</strong>
               <ul>
-                <li>1 point : structure</li>
-                <li>1 point : titre</li>
-                <li>1 point : déclaration encodage</li>
+                <li><span class="label label-success">2 points</span> service minimum atteint</li>
+                <li><span class="label label-success">4 points</span> pas d'oublis de méthodes</li>
               </ul>
             </div>
           </div>
@@ -178,24 +191,27 @@
         <div class="row well">
           <div class="">
             <h3>
-              <span class="label label-success">3 points</span>
+              <span class="label label-success">6 points</span>
               Mock retrofit
             </h3>
             <div class="col-md-6 alert">
-              <strong>Fonctionnel sans serveur</strong>
+              <strong>Prototype fonctionnel sans serveur</strong>
               <p>
-                Vous devez fournir une implantation Mock du service pour pouvoir
-                faire la démonstration de votre application fonctionnel même sans
-                avoir l'implantation du serveur
+                Pour chaque méthode du service retrofit, vous devez fournir une implantation moquée.
+                Il n'est pas nécessaire que l'information soit cohérente. Les objets retournés doivent
+                uniquement servir à permettre la démonstration de l'interface.
+              </p>
+              <p>
+                Vous ne devez pas "hardcoder" d'information ailleurs que dans le mock. Chaque endroit dans
+                le code d'interface qui ne fait pas appel au mock vous coutera un point.
               </p>
             </div>
 
             <div class="col-md-6 alert alert-info">
               <strong>Pointage</strong>
               <ul>
-                <li>1 point : structure</li>
-                <li>1 point : titre</li>
-                <li>1 point : déclaration encodage</li>
+                <li><span class="label label-success">2 points</span> le service moqué est implanté</li>
+                <li><span class="label label-success">4 points</span> Le service est utilisé partout dans l'interface</li>
               </ul>
             </div>
           </div>
@@ -203,22 +219,40 @@
         <div class="row well">
           <div class="">
             <h3>
-              <span class="label label-success">3 points</span>
+              <span class="label label-success">7 points</span>
               Navigation entre activités
             </h3>
             <div class="col-md-6 alert">
-              <strong>Structure de la balise head</strong>
+              <strong>Accès partout de partout</strong>
               <p>
-                Vous devez avoir un drawer de navigation.
+                Vous devez avoir un drawer de navigation dans toutes les activités appropriées
+                (cela n'a pas de sens pour l'écran de connexion par exemple). Le tiroir doit donner
+                accès à tous les éléments de l'interface appropriés
+                (au minimum, à l'accueil et à la déconnexion).
               </p>
+              <p>
+                Vous devez vous assurer d'avoir le "hamburger" fonctionnel.
+              </p>
+              <p>
+                Vous devez faire une mise en page personnalisée (qui vous identifie) pour
+                l'en-tête du tiroir (drawer header)
+              </p>
+              <p>
+                Vous devez vous assurer d'implanter les autres possiblités de navigation.
+                Par exemple, quand un utilisateur se connecte, aller à l'écran d'accueil, quand
+                l'utilisateur, sélectionne un item dans une liste aller à l'écran de détail, retourner
+                à la liste après la création d'un objet etc.
+              </p>
+
             </div>
 
             <div class="col-md-6 alert alert-info">
               <strong>Pointage</strong>
               <ul>
-                <li>3 points : tiroir de navigation présent dans chaque activités appropriée avec liens fonctionnels</li>
-                <li>3 points : Hamburger fonctionnel</li>
-                <li>1 point : déclaration encodage</li>
+                <li><span class="label label-success">3 points</span> le tiroir est fonctionnel dans toutes les activités et donne accès à toute l'interface</li>
+                <li><span class="label label-success">1 point</span> tiroir : hamburger fonctionnel dans toutes les activités</li>
+                <li><span class="label label-success">1 point</span> tiroir : drawer header personnalisé</li>
+                <li><span class="label label-success">2 points</span> toutes autres navigations fonctionnelles</li>
               </ul>
             </div>
           </div>
