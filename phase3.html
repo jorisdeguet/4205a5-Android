@@ -81,9 +81,17 @@
               HTTPS
             </h3>
             <div class="col-md-6 alert ">
-              <strong>Structure de votre projet</strong>
+              <strong>Certificat et serveur</strong>
               <p>
-                Client et serveur
+                Vous devez créer votre propre certificat avec un mot de passe sécurisé
+                et configurez votre serveur pour qu'il ne s'exécute que en HTTPS sur le
+                port qui vous a été attribué.
+              </p>
+              <strong>Client HTTP et application Android</strong>
+              <p>
+                Vous devez configurer l'application Android pour qu'il se connecte en HTTPS.
+                Vous devez faire la configuration nécessaire pour que l'application accepte
+                un certificat auto-signé.
               </p>
             </div>
 
@@ -100,20 +108,33 @@
         <div class="row well">
           <div class="">
               <h3>
-                <span class="label label-success">4 points</span>
+                <span class="label label-success">6 points</span>
                 Authentification par Cookie
               </h3>
               <div class="col-md-6 alert ">
-                <strong>Structure de votre projet</strong>
+                <strong>Serveur</strong>
                 <p>
-                  Client et serveur
+                  Vous devez implanter une authentification par token. Cela inclut
+                  la création, le stockage et la vérification des token et leur
+                  transport à travers un cookie.
+                </p>
+                <p>
+                  Vous devez limiter l'accès à toute l'application en conditionnant
+                  l'accès au serveur à l'existence d'un cookie transportant un token valide.
+                </p>
+                <p>
+                  Vous devez programmer le support des cookies dans votre client
+                  afin de permettre le stockage et le ré-envoi du cookie d'authentification.
                 </p>
               </div>
 
               <div class="col-md-6 alert alert-info">
                 <strong>Pointage</strong>
                 <ul>
-                  <li><span class="label label-success">1 point</span> déploiement effectué sur le bon port</li>
+                  <li><span class="label label-success">2 points</span> les tokens sont implantés sur le serveur</li>
+                  <li><span class="label label-success">2 points</span> les tokens sont transportés via des cookies</li>
+                  <li><span class="label label-success">1 point</span> les accès sont conditionnés à un token valide</li>
+                  <li><span class="label label-success">1 point</span> le client Android gère les cookies</li>
                 </ul>
               </div>
 
@@ -148,7 +169,7 @@
             <div class="row well">
               <div class="">
                   <h3>
-                    <span class="label label-success">4 points</span>
+                    <span class="label label-success">3 points</span>
                     Portrait / Paysage
                   </h3>
                   <div class="col-md-6 alert ">
