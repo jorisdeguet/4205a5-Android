@@ -128,8 +128,8 @@
           <div class="col-md-6 alert alert-info">
             <strong>Pointage</strong>
             <ul>
-              <li><span class="label label-success">2 points</span> implantation de base</li>
-              <li><span class="label label-success">4 points</span> implantation complète</li>
+              <li><span class="label label-success">2 points</span> implantation de l'identification</li>
+              <li><span class="label label-success">4 points</span> implantation de la gestion de l'entité (liste, création, détail etc.)</li>
               <li><span class="label label-success">4 points</span> validation et gestion des exceptions</li>
             </ul>
           </div>
@@ -144,14 +144,19 @@
           <div class="col-md-6 alert">
             <strong>Intégration avec le client</strong>
             <p>
-              L'intégralité des service identifiés sont intégrés avec le client. Vous pouvez en faire
-              la démonstration avec l'application ou des tests JUnit.
+              L'intégralité des service identifiés sont intégrés avec le client. L'interface graphique doit envoyer des appels asynchrones au serveur. 
+            </p>
+            <p>
+              Tous les appels au mock doivent être remplacés par des appels réseau à votre serveur.
+            </p>
+            <p>
+              Vous pouvez utiliser des tests unitaires synchrones Android mais ce n'est pas obligatoire et ça ne rapporte pas de point.
             </p>
           </div>
           <div class="col-md-6 alert alert-info">
             <strong>Pointage</strong>
             <ul>
-              <li><span class="label label-success">4 points</span> implantation intégrée avec le client Android</li>
+              <li><span class="label label-success">4 points</span> implantation intégrée avec l'interface graphique du client Android</li>
             </ul>
           </div>
         </div>
