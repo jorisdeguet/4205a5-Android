@@ -1,0 +1,13 @@
+SERVEUR
+Dans le répertoire du serveur, on peut le partir avec
+  "mvn tomcat7:run"
+
+On peut alors tester le serveur sur l'URL :
+https://localhost:9999/rest/hello
+
+CLIENT ANDROID
+Exécuter la classe de tests du projet sur un émulateur roulant sur la même machine que le serveur.
+
+Le client okhttp doit maintenant accepter les certificats auto-signés (pour localhost)
+voir la méthode
+                       getClient
