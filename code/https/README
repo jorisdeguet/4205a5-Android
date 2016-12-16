@@ -9,5 +9,4 @@ CLIENT ANDROID
 Exécuter la classe de tests du projet sur un émulateur roulant sur la même machine que le serveur.
 
 Le client okhttp doit maintenant accepter les certificats auto-signés (pour localhost)
-voir la méthode
-                       getClient
+voir la classe RetrofitHTTPS

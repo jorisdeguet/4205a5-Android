@@ -3,12 +3,7 @@ package deguet.org.babytracker;
 import android.test.AndroidTestCase;
 import android.util.Log;
 
-import org.deguet.model.MUser;
-
 import java.io.IOException;
-import java.util.List;
-
-import retrofit2.Response;
 
 /**
  * Created by joris on 16-05-29.
