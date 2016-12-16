@@ -1,5 +1,0 @@
-Lancer la classe de tests dans le projet
-
-Dans le MonGsonAMoiPersoAvecLesTrucsQueJAime, essayez de mettre en commentaire les
-lignes qui commencent par "builder.registerTypeAdapter"
-et essayez de comprendre le résultat
