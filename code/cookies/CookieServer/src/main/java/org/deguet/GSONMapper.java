@@ -1,8 +1,6 @@
 package org.deguet;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import org.glassfish.jersey.internal.inject.Custom;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
@@ -68,11 +66,9 @@ public class GSONMapper  implements
         return true;
     }
 
-
     public long getSize(Object object, Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType) {
         return -1;
     }
-
 
     public void writeTo(Object object, Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType, MultivaluedMap<String, Object> httpHeaders, OutputStream entityStream)
             throws IOException, WebApplicationException {

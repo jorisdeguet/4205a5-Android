@@ -9,8 +9,6 @@ import javax.ws.rs.core.Cookie;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
-import java.io.UnsupportedEncodingException;
-import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 @Path("/")
@@ -39,16 +37,11 @@ public class WebServiceCookie {
                 .build();
 	}
 
-
-
 	@GET					@Path("/signin/{s}/{s2}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response signinGet(@PathParam("s") String s, @PathParam("s") String s2) {
 		return signin(s);
 	}
-
-
-
 
 	@GET					@Path("/signout")
 	//@Produces(MediaType.APPLICATION_JSON)

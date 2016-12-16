@@ -5,7 +5,7 @@
 	<artifactId>CookieServer</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
-	<name>Baby-Server</name>
+	<name>Cookie-Server</name>
 	<url>http://maven.apache.org</url>
 
 
