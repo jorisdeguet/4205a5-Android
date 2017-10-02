@@ -37,7 +37,7 @@ public class GSONMapper  implements
     }
 
     public boolean isReadable(Class<?> type, Type genericType,
-                              java.lang.annotation.Annotation[] annotations, MediaType mediaType) {
+                              Annotation[] annotations, MediaType mediaType) {
         return true;
     }
 
@@ -46,13 +46,7 @@ public class GSONMapper  implements
         InputStreamReader streamReader = null;
         try {
              streamReader = new InputStreamReader(entityStream, UTF_8);
-            Type jsonType;
-            if (type.equals(genericType)) {
-                jsonType = type;
-            } else {
-                jsonType = genericType;
-            }
-            return getGson().fromJson(streamReader, jsonType);
+            return getGson().fromJson(streamReader, genericType);
         } catch(IOException io) {
             io.printStackTrace();
         } finally {
@@ -74,12 +68,6 @@ public class GSONMapper  implements
             throws IOException, WebApplicationException {
         OutputStreamWriter writer = new OutputStreamWriter(entityStream, UTF_8);
         try {
-            Type jsonType;
-            if (type.equals(genericType)) {
-                jsonType = type;
-            } else {
-                jsonType = genericType;
-            }
             getGson().toJson(object, genericType, writer);
         } finally {
             writer.close();
