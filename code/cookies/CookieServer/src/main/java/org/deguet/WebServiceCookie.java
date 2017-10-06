@@ -16,8 +16,6 @@ public class WebServiceCookie {
 
     public static class NoCookie extends Exception{}
 
-	final Logger logger = LoggerFactory.getLogger(getClass());
-
 	public final static String Cookie = "votvot-id";
 
 	private Gson gson;
@@ -28,10 +26,10 @@ public class WebServiceCookie {
 
 	@POST					@Path("/signin")
 	public Response signin(String s) {
-        logger.debug("WS SOCIAL : SIGNIN request " + s);
+        System.out.println("WS SOCIAL : SIGNIN request " + s);
         String fakeToken = UUID.randomUUID().toString();
         NewCookie cookiee = new NewCookie(Cookie, fakeToken, "/", "", "id token", 604800, false);
-        logger.debug("WS SOCIAL : SIGNIN Success Cookie " + cookiee.toString() + " " +cookiee.getPath());
+		System.out.println("WS SOCIAL : SIGNIN Success Cookie " + cookiee.toString() + " " +cookiee.getPath());
         return Response.ok(gson.toJson(fakeToken),MediaType.APPLICATION_JSON)
                 .cookie(cookiee)
                 .build();
@@ -47,22 +45,22 @@ public class WebServiceCookie {
 	//@Produces(MediaType.APPLICATION_JSON)
 	public Response signout(@CookieParam(Cookie) Cookie cookie) {
 		// todo the service signout by erasing the token
-		logger.debug("WS SOCIAL : SIGNOUT REQUEST " + cookie);
+		System.out.println("WS SOCIAL : SIGNOUT REQUEST " + cookie);
 		// erase the cookie
 		if (cookie == null) return Response.ok("No cookie",MediaType.TEXT_PLAIN).build();
-        logger.debug("WS SOCIAL : SIGNOUT REQUEST forge new cookie to die " );
+		System.out.println("WS SOCIAL : SIGNOUT REQUEST forge new cookie to die " );
 		NewCookie toDelete = new NewCookie(Cookie, null, "/", null, null, 0, false);
         Response res = Response.ok(gson.toJson(true),MediaType.TEXT_PLAIN)
 				.cookie(toDelete)
 				.build();
-        logger.debug("WS SOCIAL : SIGNOUT REQUEST forgeD "+toDelete );
+		System.out.println("WS SOCIAL : SIGNOUT REQUEST forgeD "+toDelete );
 		return res;
 	}
 
     @GET					@Path("/all")
     @Produces(MediaType.APPLICATION_JSON)
     public String all(@CookieParam(Cookie) Cookie cookie) throws NoCookie {
-        logger.debug("WS SOCIAL : ALL REQUEST  with cookie ::: " + cookie);
+		System.out.println("WS SOCIAL : ALL REQUEST  with cookie ::: " + cookie);
         if (cookie == null) throw new NoCookie();
         // build the list
         List<String> res = Arrays.asList("Jo","Mo","To","Yo");
