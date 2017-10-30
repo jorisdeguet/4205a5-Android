@@ -1,137 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="page du cours programmation mobile">
-  <meta name="author" content="Département informatique, collège Édouard Montpetit">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="page du cours programmation mobile">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
 
-  <title>Programmation mobile</title>
+        <title>Programmation mobile</title>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-  <style>
-  body {
-    padding-top: 70px;
-  }
-  </style>
-</head>
-<body>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <!-- Fixed navbar -->
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">S10 : <strong>Programmation mobile</strong></a>
-      </div>
-      <div class="navbar-collapse collapse navbar-right">
-        <ul class="nav navbar-nav">
-            <li><a href="index.html">Accueil</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+    <body>
 
-  <div class="container">
-
-
-    <div class="row">
-      <div class="">
-        <h3 id="s10">Semaine 10 : mot de passe, token, cookie et sécurité</h3>
-        <div class="col-md-4 alert alert-success">
-          <strong>Avant la séance (2h)</strong>
-          <p>
-            Faites une recherche sur comment effectuer un hash d'une String
-            en Java (avec l'algorithme SHA256). Faites un petit projet de démontration.
-          </p>
-          <p>
-            Regardez la page <a href="https://fr.wikipedia.org/wiki/Cookie_(informatique)">sur les cookies</a>
-          </p>
-          <p>
-            Regardez les videos suivantes:
-            <iframe width="200" height="113" src="https://www.youtube.com/embed/JFkRbsFI6KQ?list=PLYHAgLf_cnWSzWuVuasFEe-z_ViOpkMfV" frameborder="0" allowfullscreen></iframe>
-            <iframe width="200" height="113" src="https://www.youtube.com/embed/HD7igpxxw7w?list=PLYHAgLf_cnWSzWuVuasFEe-z_ViOpkMfV" frameborder="0" allowfullscreen></iframe>
-          </p>
-          <p>
-            Vous trouverez également des exemples client-serveur pour
-            <a class="btn btn-xs btn-warning" href="code/https/">https</a> et les
-            <a class="btn btn-xs btn-warning" href="code/cookies/">cookies</a>.
-          </p>
-        </div>
-        <div class="col-md-4 alert alert-warning">
-          <strong>Pendant la séance en classe</strong>
-          <p>
-            Nous discuterons des différentes attaques possible en terme de sécurité et des réponses à apporter. 
-          </p>
-            <ul>
-                <li>Interception : HTTPS et Token</li>
-                <li>Intrusion : SHA256 et hash de passwords</li>
-                <li>Injection : échappement etc.</li>
-            </ul>
-          <p>
-            Nous programmerons une solution avec token et en particulier l'association entre le token et l'utilisateur ainsi que l'expiration du token.
-          </p>
-          <p>
-            Nous regarderons également les pages sur
-            <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">cross site request forgery</a>
-            et
-            <a href="https://en.wikipedia.org/wiki/Same-origin_policy">same origin policy</a>
-          </p>
-        </div>
-        <div class="col-md-4 alert alert-info">
-          <strong>Pendant la séance de laboratoire</strong>
-          <p>
-            J'effectuerai la correction en classe de la phase 2 de votre projet. Assurez-vous de
-            regarder les conditions de correction décrites dans l'énoncé.
-          </p>
-          <p>
-            Vous devez compléter les exercices.
-          </p>
-          <p>
-            Vous devrez commencer à regarder la phase 3 du projet et vous devez mettre en place
-            les améliorations de sécurité exigées.
-          </p>
-        </div>
-        <div class="col-md-12 well">
-          <div>
-            <a class="btn btn-primary btn-xs" >
-              Exercices de la semaine
-            </a>
-            <div >
-              <h3>Exercice A</h3>
-              <p>
-                Mettez en place un projet <strong>JourHTTPS</strong> contenant un serveur HTTPS démarrant sur le port 7654.
-                Le serveur doit fournir un service web avec une méthode GET sur l'URL "/api/jourdaujourdhui/{annee}".
-                Le service doit renvoyer le jour de la semaine en français (lundi mardi ...) de la date d'aujourd'hui
-                mais dans l'année spécifiée en paramètre.
-              </p>
-              <p>
-                Exemple : si nous sommes le 10 octobre 2000 et qu'on appelle le service avec <strong>annee</strong> qui
-                vaut 1981, le service doit répondre "samedi".
-              </p>
-              <h3>Exercice B</h3>
-              <p>
-                Mettez en place un projet <strong>JourCookie</strong>. Assurez vous que le service répond uniquement
-                si un cookie du serveur est présent.
-              </p>
-              <p>
-                Créez 2 méthodes supplémentaires pour installer le cookie "/api/cookie/on" et le supprimer "/api/cookie/off".
-              </p>
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">S10 : <strong>Programmation mobile</strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
-  </html>
+        <div class="container">
+
+
+            <div class="row">
+                <div class="">
+                    <h3 id="s10">Semaine 10 : mot de passe, token, cookie et sécurité</h3>
+                    <div class="col-md-4 alert alert-success">
+                        <strong>Avant la séance (2h)</strong>
+                        <p>
+                            Faites une recherche sur comment effectuer un hash d'une String
+                            en Java (avec l'algorithme SHA256). Faites un petit projet de démontration.
+                        </p>
+                        <p>
+                            Regardez la page <a href="https://fr.wikipedia.org/wiki/Cookie_(informatique)">sur les cookies</a>
+                        </p>
+                        <p>
+                            Regardez les videos suivantes:
+                            <iframe width="200" height="113" src="https://www.youtube.com/embed/JFkRbsFI6KQ?list=PLYHAgLf_cnWSzWuVuasFEe-z_ViOpkMfV" frameborder="0" allowfullscreen></iframe>
+                            <iframe width="200" height="113" src="https://www.youtube.com/embed/HD7igpxxw7w?list=PLYHAgLf_cnWSzWuVuasFEe-z_ViOpkMfV" frameborder="0" allowfullscreen></iframe>
+                        </p>
+                        <p>
+                            Vous trouverez également des exemples client-serveur dans le repo github qui incluent un client et un serveur fonctionnel pour:
+                            <span class="label label-danger" href="code/https/">https</span> et les
+                            <span class="label label-danger" href="code/https/">cookies</span>.
+                        </p>
+                    </div>
+                    <div class="col-md-4 alert alert-warning">
+                        <strong>Pendant la séance en classe</strong>
+                        <p>
+                            Nous discuterons des différentes attaques possible en terme de sécurité et des réponses à apporter. 
+                        </p>
+                        <ul>
+                            <li>Interception : HTTPS et Token</li>
+                            <li>Intrusion : SHA256 et hash de passwords</li>
+                            <li>Injection : échappement etc.</li>
+                        </ul>
+                        <p>
+                            Nous programmerons une solution avec token et en particulier l'association entre le token et l'utilisateur ainsi que l'expiration du token.
+                        </p>
+                        <p>
+                            Nous regarderons également les pages sur
+                            <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">cross site request forgery</a>
+                            et
+                            <a href="https://en.wikipedia.org/wiki/Same-origin_policy">same origin policy</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 alert alert-info">
+                        <strong>Pendant la séance de laboratoire</strong>
+                        <p>
+                            Vous devez compléter les exercices.
+                        </p>
+                        <p>
+                            Vous devrez commencer à regarder la phase 3 du projet et
+                            les améliorations de sécurité exigées.
+                        </p>
+                    </div>
+                    <div class="col-md-12 well">
+                        <div>
+                            <a class="btn btn-primary btn-xs" >
+                                Exercices de la semaine
+                            </a>
+                            <div >
+                                <h3>Exercice A</h3>
+                                <p>
+                                    Mettez en place un projet <strong>JourHTTPS</strong> contenant un serveur HTTPS démarrant sur le port 7654.
+                                    Le serveur doit fournir un service web avec une méthode GET sur l'URL "/api/jourdaujourdhui/{annee}".
+                                    Le service doit renvoyer le jour de la semaine en français (lundi mardi ...) de la date d'aujourd'hui
+                                    mais dans l'année spécifiée en paramètre dans l'URL.
+                                </p>
+                                <p>
+                                    Exemple : si nous sommes le 10 octobre 2000 et qu'on appelle le service avec <strong>annee</strong> qui
+                                    vaut 1981, le service doit répondre "samedi".
+                                </p>
+                                <h3>Exercice B</h3>
+                                <p>
+                                    Mettez en place un projet <strong>JourCookie</strong>. Assurez vous que le service répond uniquement
+                                    si un cookie du serveur est présent.
+                                </p>
+                                <p>
+                                    Créez 2 méthodes supplémentaires pour installer le cookie "/api/cookie/on" et le supprimer "/api/cookie/off".
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
