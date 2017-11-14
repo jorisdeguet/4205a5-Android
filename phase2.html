@@ -67,71 +67,56 @@
                 </div>
             </div>
             <div class="row well">
-                <div class="">
-                    <h3>
-                        <span class="label label-success">4 points</span>
-                        Structure du projet
-                    </h3>
-                    <div class="col-xs-9 alert">
-                        <strong>Structure de dossiers</strong>
-                        <p>
-                            Vous devez remettre au minimum 2 projets: le projet Android et le projet de serveur.
-                            Un projet commun est suggéré mais pas nécessaire.
-                            Les 2 projets doivent être chacun dans leur répertoire dans un répertoire avec le nom de votre
-                            application
-                        </p>
-                        <strong>Structure de projet</strong>
-                        <p>
-                            Les 2 projets doivent utiliser le même nom de package et décrire 2 artifacts différents. Par exemple:
-                        </p>
-                        <ul>
-                            <li>un "company domain" de org.deguet et un nom d'application de "Pipo" pour l'application</li>
-                            <li>un "groupid" de org.deguet et un artifactID de "PipoServer" pour le serveur.</li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-3 alert alert-info">
-                        <strong>Pointage</strong>
-                        <ul>
-                            <li><span class="label label-success">2 points</span> structure de dossiers respectée</li>
-                            <li><span class="label label-success">2 points</span> structure de nommage des projets</li>
-                        </ul>
-                    </div>
+                <h3>
+                    <span class="label label-success">1 point</span>
+                    Structure du projet
+                </h3>
+                <div class="col-xs-12 alert">
+                    <strong>Structure de dossiers</strong>
+                    <p>
+                        Vous devez remettre au minimum 2 projets: le projet Android et le projet de serveur.
+                        Un projet commun est suggéré mais pas nécessaire.
+                        Les 2 projets doivent être chacun dans leur répertoire dans un répertoire avec le nom de votre
+                        application
+                    </p>
+                    <strong>Structure de projet</strong>
+                    <p>
+                        Les 2 projets doivent utiliser le même nom de package et décrire 2 artifacts différents. Par exemple:
+                    </p>
+                    <ul>
+                        <li>un "company domain" de org.deguet et un nom d'application de "Pipo" pour l'application</li>
+                        <li>un "groupid" de org.deguet et un artifactID de "PipoServer" pour le serveur.</li>
+                    </ul>
                 </div>
             </div>
             <div class="row ">
                 <div class="">
                     <h3>
-                        <span class="label label-success">10 points</span>
+                        <span class="label label-success">8 points</span>
                         Serveur et implantation du web service.
                     </h3>
-                    <div class="col-xs-9 alert">
-                        <strong>Minimum</strong>
+                    <div class="col-xs-8 alert">
                         <p>
-                            Vous devez implanter au minimum la gestion des utilisateurs et la gestion de base
-                            de vos entités.
+                            Vous devez implanter la gestion des utilisateurs et la gestion de base de vos entités (création, liste et détail).
                         </p>
                         <p>
                             Il n'est pas nécessaire d'implanter de persistance. Les objets peuvent être simplement
-                            stockés en mémoire dans des collections.
-                        </p>
-                        <strong>Implantation complète</strong>
-                        <p>
-                            Vous devez implanter l'intégralité des appels identifiés dans votre service
-                            pendant la phase 1.
+                            stockés en mémoire dans des collections sur le serveur.
                         </p>
                         <strong>Validation et gestion des exceptions</strong>
                         <p>
                             Pour tous les appels implantés vous effectuer la validation sur le serveur et
-                            gérer la conversion des exceptions en HTTP.
+                            gérer la conversion des exceptions en HTTP. Cela inclut (non exhaustif) de valider un courriel, un nom d'utilisateur vide ou blanc etc.
                         </p>
 
                     </div>
-                    <div class="col-xs-3 alert alert-info">
+                    <div class="col-xs-4 alert alert-info">
                         <strong>Pointage</strong>
                         <ul>
+                            <li><span class="label label-success">1 point</span> chaque web service produit une trace dans la console du serveur</li>
                             <li><span class="label label-success">2 points</span> implantation de l'identification</li>
                             <li><span class="label label-success">4 points</span> implantation de la gestion de l'entité (liste, création, détail etc.)</li>
-                            <li><span class="label label-success">4 points</span> validation et gestion des exceptions</li>
+                            <li><span class="label label-success">2 points</span> validation et gestion des exceptions</li>
                         </ul>
                     </div>
                 </div>
@@ -139,10 +124,10 @@
             <div class="row well">
                 <div class="">
                     <h3>
-                        <span class="label label-success">4 points</span>
+                        <span class="label label-success">8 points</span>
                         Intégration client serveur
                     </h3>
-                    <div class="col-xs-9 alert">
+                    <div class="col-xs-8 alert">
                         <strong>Intégration avec le client</strong>
                         <p>
                             L'intégralité des service identifiés sont intégrés avec le client. L'interface graphique doit envoyer des appels asynchrones au serveur. 
@@ -151,39 +136,20 @@
                             Tous les appels au mock doivent être remplacés par des appels réseau à votre serveur.
                         </p>
                         <p>
-                            Vous pouvez utiliser des tests unitaires synchrones Android mais ce n'est pas obligatoire et ça ne rapporte pas de point.
+                            Les erreurs de validation et toute autre exception correspondent à des messages clairs (pas de réseau, quel champ d'un formulaire pose problème etc.).
                         </p>
                     </div>
-                    <div class="col-xs-3 alert alert-info">
+                    <div class="col-xs-4 alert alert-info">
                         <strong>Pointage</strong>
                         <ul>
-                            <li><span class="label label-success">4 points</span> implantation intégrée avec l'interface graphique du client Android</li>
+                            <li><span class="label label-success">2 points</span> inscription et connexion intégrées au client Android</li>
+                            <li><span class="label label-success">4 points</span> gestion de l'entité intégrée au client Android</li>
+                            <li><span class="label label-success">2 points</span> messages utilisateurs explicites en cas d'erreur</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="row ">
-                <div class="">
-                    <h3>
-                        <span class="label label-success">1 point</span>
-                        Déploiement sur le serveur du collège
-                    </h3>
-                    <div class="col-xs-8 alert">
-                        <strong>Sur notre serveur</strong>
-                        <p>
-                            Vous devez déployer votre serveur tel qu'indiqué sur la fiche que vous avez reçue.
-                        </p>
-
-                    </div>
-                    <div class="col-xs-4 alert alert-info">
-                        <strong>Pointage</strong>
-                        <ul>
-                            <li><span class="label label-success">1 point</span> déploiement effectué sur le bon port</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row well">
                 <div class="">
                     <h3>Fonctionnement global</h3>
                     <p>
