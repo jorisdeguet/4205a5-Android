@@ -28,7 +28,7 @@ public class WebServiceCookie {
 	public Response signin(String s) {
         System.out.println("WS SOCIAL : SIGNIN request " + s);
         String fakeToken = UUID.randomUUID().toString();
-        NewCookie cookiee = new NewCookie(Cookie, fakeToken, "/", "", "id token", 604800, false);
+        NewCookie cookiee = new NewCookie(Cookie, fakeToken, "/", null, "id token", 604800, false);
 		System.out.println("WS SOCIAL : SIGNIN Success Cookie " + cookiee.toString() + " " +cookiee.getPath());
         return Response.ok(gson.toJson(fakeToken),MediaType.APPLICATION_JSON)
                 .cookie(cookiee)
