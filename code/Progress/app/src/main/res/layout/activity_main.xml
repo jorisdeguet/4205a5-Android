@@ -13,18 +13,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:background="#00f"
         android:layout_height="0dp"
         android:layout_weight="1"
         >
         <ProgressBar
             android:id="@+id/progress"
+            android:background="#f00"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:indeterminate="true"
-            android:visibility="invisible"
+            android:visibility="gone"
             />
         <TextView
             android:id="@+id/stuff"
+            android:background="#0f0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Downloaded stuff"

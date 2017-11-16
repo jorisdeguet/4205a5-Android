@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void startDownload(){
         progress.setVisibility(View.VISIBLE);
-        stuff.setVisibility(View.INVISIBLE);
+        stuff.setVisibility(View.GONE);
     }
 
     private void endDownload(){
-        progress.setVisibility(View.INVISIBLE);
+        progress.setVisibility(View.GONE);//INVISIBLE occupe de l'espace GONE non
         stuff.setVisibility(View.VISIBLE);
     }
 
