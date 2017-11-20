@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(C c) {
-            progressD.hide();
+            progressD.dismiss();
             super.onPostExecute(c);
         }
 
