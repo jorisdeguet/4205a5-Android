@@ -4,4 +4,6 @@
 **/.gitignore
 **/build/
 **/*.iml
+**/local.properties
 code/Progress/.gradle/**
+code/ListFragment/.gradle/**
