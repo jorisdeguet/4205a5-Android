@@ -7,3 +7,4 @@
 **/local.properties
 code/Progress/.gradle/**
 code/ListFragment/.gradle/**
+code/cookies/CookieAndroid/.gradle/**
