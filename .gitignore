@@ -4,4 +4,8 @@
 **/.gitignore
 **/build/
 **/*.iml
+**/local.properties
 code/Progress/.gradle/**
+code/ListFragment/.gradle/**
+code/cookies/CookieAndroid/.gradle/**
+code/https/HttpsAndroid/.gradle/**
