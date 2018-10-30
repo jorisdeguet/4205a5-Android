@@ -1,0 +1,12 @@
+SERVER
+Start server:
+  first go to the server directory
+  then run tomcat7 through maven plugin
+  "mvn tomcat7:run"
+
+Server runs on port 7050 : http://localhost:7050/rest/signin
+
+CLIENT ANDROID
+Start Android:
+  start AVD on the same machine as server (android uses 10.0.2.2 IP addr)
+  run the test class to run both web service tests
