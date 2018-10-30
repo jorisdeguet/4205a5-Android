@@ -40,6 +40,7 @@ public class ExampleInstrumentedTest {
             }
         }
         Log.i("BUGGYBUG", normal + " " + errors + " " + buggy);
+        System.out.println(normal + " " + errors + " " + buggy);
     }
 
     @Test
@@ -64,6 +65,7 @@ public class ExampleInstrumentedTest {
             }
         }
         Log.i("BUGGYBUG", normal + " " + errors + " " + buggy);
+        System.out.println(normal + " " + errors + " " + buggy);
     }
 
 }

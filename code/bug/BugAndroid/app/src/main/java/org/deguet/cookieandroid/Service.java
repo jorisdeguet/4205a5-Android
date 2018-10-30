@@ -13,8 +13,8 @@ import retrofit2.http.Path;
  */
 public interface Service {
 
-    String endPoint = "http://10.0.2.2:7050/";
-    //String endPoint = "http://5a5.di.college-em.info:7050/";
+    //String endPoint = "http://10.0.2.2:7050/";
+    String endPoint = "http://5a5.di.college-em.info:7050/";
 
     @POST("/rest/signin")
     Call<String> error400(@Body String s);
