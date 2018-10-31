@@ -3,6 +3,8 @@ package org.deguet.cookieandroid;
 import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
 
+import junit.framework.Assert;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -41,6 +43,9 @@ public class ExampleInstrumentedTest {
         }
         Log.i("BUGGYBUG", normal + " " + errors + " " + buggy);
         System.out.println(normal + " " + errors + " " + buggy);
+        Assert.assertEquals(0, normal);
+        Assert.assertEquals(300, errors);
+        Assert.assertEquals(0, buggy);
     }
 
     @Test
@@ -65,6 +70,9 @@ public class ExampleInstrumentedTest {
             }
         }
         Log.i("BUGGYBUG", normal + " " + errors + " " + buggy);
+        Assert.assertEquals(300, normal);
+        Assert.assertEquals(0, errors);
+        Assert.assertEquals(0, buggy);
         System.out.println(normal + " " + errors + " " + buggy);
     }
 
