@@ -6,6 +6,7 @@
 **/*.iml
 **/local.properties
 code/Progress/.gradle/**
+code/Splash/.gradle/**
 code/bug/BugAndroid/.gradle/**
 code/ListFragment/.gradle/**
 code/cookies/CookieAndroid/.gradle/**
