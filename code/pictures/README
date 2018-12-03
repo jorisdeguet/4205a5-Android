@@ -1,0 +1,10 @@
+SERVEUR
+Dans le répertoire du serveur, on peut le partir avec
+  "mvn tomcat7:run"
+
+On peut alors tester le serveur sur l'URL : http://localhost:8888/
+
+Permet de récupérer une photo et de la sauver dans le répertoire image
+
+CLIENT ANDROID
+Permet d'accéder à la gallerie du téléphone, de l'afficher dans une liste, en cliquant sur un élément de la liste, il est téléverser sur le serveur.
