@@ -16,26 +16,6 @@ public interface ServicePics {
 
     String endPoint = "http://10.0.2.2:8888/";
 
-    @POST("/rest/signin")
-    Call<String> signin(@Body String s) ;
-
-    @GET("/rest/signin/{s}/{s2}")
-    Call<String> signin(@Path("s") String s, @Path("s2") String s2);
-
-    @GET("/rest/signout")
-    Call<String> signout();
-
-    @GET("/rest/all")
-    Call<String> all();
-
-
-    @Multipart
-    @POST("/rest/pics/post")
-    Call<Boolean> postJPEG(@Part("file\"; filename=\"pp.png\" ") RequestBody file);
-
-    @POST("/rest/pics/post")
-    Call<Boolean> postBase64(@Body String b64);
-
     @POST("/rest/pics/post")
     Call<Boolean> postBytes(@Body RequestBody bytes);
 }

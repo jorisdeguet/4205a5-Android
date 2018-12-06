@@ -45,8 +45,6 @@ import retrofit2.Response;
 
 public class ImageElementAdapter extends ArrayAdapter<ImageElement> {
 
-    public boolean useGlide = true;
-
     public ImageElementAdapter(@NonNull Context context) {
         super(context, android.R.layout.simple_list_item_1);
     }
@@ -58,10 +56,8 @@ public class ImageElementAdapter extends ArrayAdapter<ImageElement> {
         View v = li.inflate(R.layout.item, null);
         final ImageElement element = getItem(position);
         final ImageView iv =  v.findViewById(R.id.iv);
-        TextView tv =  v.findViewById(R.id.tv);
         TextView exif =  v.findViewById(R.id.exif);
 
-        tv.setText(element.uri.toString());
         try {
             ExifInterface ei = element.getExif();
             String exifString =

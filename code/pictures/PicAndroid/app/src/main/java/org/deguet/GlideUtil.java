@@ -36,7 +36,7 @@ public class GlideUtil {
                 .into(new SimpleTarget<byte[]>() {
                           @Override
                           public void onResourceReady(@NonNull byte[] resource, @Nullable Transition<? super byte[]> transition) {
-                              Log.i("UPLOAD Glide", "B64 " + resource.length);
+                              Log.i("UPLOAD Glide", "binary length " + resource.length);
                               RequestBody bytes = RequestBody.create(MediaType.parse("application/octet-stream"), resource);
                               HttpUtil.service().postBytes(bytes).enqueue(new Callback<Boolean>() {
                                   @Override
