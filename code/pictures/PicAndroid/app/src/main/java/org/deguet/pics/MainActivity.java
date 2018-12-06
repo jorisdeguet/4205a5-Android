@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import org.deguet.GlideUtil;
 import org.deguet.ImageElement;
 import org.deguet.ImageElementAdapter;
 
@@ -55,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendToServer() {
-
+        for (ImageElement e : images){
+            GlideUtil.sendIt(e);
+        }
     }
 
     @Override

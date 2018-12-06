@@ -75,94 +75,10 @@ public class ImageElementAdapter extends ArrayAdapter<ImageElement> {
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendIt(element);
+                GlideUtil.sendIt(element);
             }
         });
         return v;
     }
 
-    private void sendIt(ImageElement element) {
-        try {
-            if (useGlide) {
-                final Target t = Glide.with(getContext()).as(byte[].class)
-                        .load(element.uri)
-                        .apply(
-                                RequestOptions
-                                        .encodeFormatOf(Bitmap.CompressFormat.JPEG)
-                                        .encodeQuality(80)
-                                        .override(1024, 1024)
-                        )
-                        .into(new SimpleTarget<byte[]>() {
-                                  @Override
-                                  public void onResourceReady(@NonNull byte[] resource, @Nullable Transition<? super byte[]> transition) {
-                                      Log.i("UPLOAD Glide", "B64 " + resource.length);
-                                      RequestBody bytes = RequestBody.create(MediaType.parse("application/octet-stream"), resource);
-                                      HttpUtil.service().postBytes(bytes).enqueue(new Callback<Boolean>() {
-                                          @Override
-                                          public void onResponse(Call<Boolean> call, Response<Boolean> response) {
-                                              Toast.makeText(getContext(), "Ok " + response.body(), Toast.LENGTH_SHORT).show();
-                                          }
-
-                                          @Override
-                                          public void onFailure(Call<Boolean> call, Throwable t) {
-                                              Toast.makeText(getContext(), "Ko", Toast.LENGTH_SHORT).show();
-                                          }
-                                      });
-                                  }
-                              }
-                        );
-                // see target doc https://bumptech.github.io/glide/javadocs/480/com/bumptech/glide/request/target/SimpleTarget.html
-            } else {
-                InputStream iStream = getContext().getContentResolver().openInputStream(element.uri);
-                byte[] inputData = getBytes(iStream);
-                File f = new File(getContext().getFilesDir(),"gna.jpg");
-
-                OutputStream outputStream = new FileOutputStream(f);
-                IOUtils.copy(iStream, outputStream);
-                outputStream.close();
-                final String b64  = Base64.encodeToString(inputData, Base64.DEFAULT);
-                Log.i("UPLOAD", "B64 " + b64.length());
-                HttpUtil.service().postBase64(b64).enqueue(new Callback<Boolean>() {
-                    @Override
-                    public void onResponse(Call<Boolean> call, Response<Boolean> response) {
-                        Toast.makeText(getContext(), "Ok " + b64.length(), Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onFailure(Call<Boolean> call, Throwable t) {
-                        Toast.makeText(getContext(), "Ko", Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private byte[] getBytes(InputStream inputStream) throws IOException {
-        ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
-        int bufferSize = 1024;
-        byte[] buffer = new byte[bufferSize];
-        int len = 0;
-        while ((len = inputStream.read(buffer)) != -1) {
-            byteBuffer.write(buffer, 0, len);
-        }
-        return byteBuffer.toByteArray();
-    }
-
-    private String getRealPathFromURI(Context context, Uri contentUri) {
-        String res = "";
-        String[] proj = { MediaStore.Images.Media.DATA };
-        Cursor cursor = context.getContentResolver().query(contentUri, proj, null, null, null);
-        if (cursor != null) {
-            if (cursor.moveToFirst()) {
-                int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-                res = cursor.getString(column_index);
-            }
-            cursor.close();
-        } else {
-            return contentUri.getPath();
-        }
-        return res;
-    }
 }

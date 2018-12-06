@@ -13,7 +13,7 @@ public class ImageElement {
 
 
 
-    Uri uri;
+    public Uri uri;
     Context ctx;
 
     @Override
