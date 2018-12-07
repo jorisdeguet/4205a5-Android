@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MenuActivity">
+
+    <Button
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grid"/>
+    <Button
+        android:id="@+id/stagger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Staggered"/>
+
+    <Button
+        android:id="@+id/quilt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quilt + Spaces"/>
+
+    <Button
+        android:id="@+id/packed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quilt + Packed"/>
+
+</LinearLayout>
