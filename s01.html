@@ -1,135 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="page du cours programmation mobile">
-  <meta name="author" content="Département informatique, collège Édouard Montpetit">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="page du cours programmation mobile">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
 
-  <title>Programmation mobile</title>
+        <title>Programmation mobile</title>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-  <style>
-  body {
-    padding-top: 70px;
-  }
-  </style>
-</head>
-<body>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <!-- Fixed navbar -->
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">S1 : <strong>Programmation mobile</strong></a>
-      </div>
-      <div class="navbar-collapse collapse navbar-right">
-        <ul class="nav navbar-nav">
-            <li><a href="index.html">Accueil</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+    <body>
 
-  <div class="container">
-    <div class="row">
-      <div class="">
-        <h3 id="s1">Semaine 1 : multiple activités, librairie de support</h3>
-        <div class="col-md-12 alert alert-danger">
-          <strong>Évaluations</strong>
-          <p>
-            Cette semaine, vous prendrez connaissance de la phase 1 du TP et commencerez votre travail.
-          </p>
-        </div>
-        <div class="col-md-4 alert">
-          <strong>Avant la séance</strong>
-
-          <p>
-            Révisez la programmation Android de base avec la video:
-          </p>
-          <p><iframe width="200" height="150" src="https://www.youtube.com/embed/tkSaWvoX4Wo" frameborder="0" allowfullscreen></iframe></p>
-          <p>
-            Regardez les videos suivantes:
-          </p>
-          <p><iframe width="200" height="150" src="https://www.youtube.com/embed/7dneldqxDKk" frameborder="0" allowfullscreen></iframe></p>
-          <p><iframe width="200" height="150" src="https://www.youtube.com/embed/768kpYaOZr0" frameborder="0" allowfullscreen></iframe></p>
-
-        </div>
-        <div class="col-md-4 alert  alert-warning">
-          <strong>Pendant la séance en classe (par équipe de 2)</strong>
-          <p>
-            Nous discuterons de l'ensemble de l'application et de comment nous allons
-            procéder.
-            (identifier l'utilisateur, partager les classes de code communes etc.)
-          </p>
-
-          <a href="utils/overview.png"><img src="utils/overview.png" style="width:100%"/></a>
-          <p>
-            Nous reviendrons sur la création d'un projet et d'activités comme vu dans les vidéos.
-          </p>
-          <p>
-            Nous passerons à travers les énoncés des 3 phases du projet.
-          </p>
-        </div>
-        <div class="col-md-4 alert alert-info">
-          <strong>Pendant la séance en laboratoire</strong>
-          <p>
-            Vous pouvez apporter votre ordinateur si vous voulez vérifier votre installation.
-          </p>
-          <p>
-            Vous devrez compléter les exercices de la semaine.
-          </p>
-          <p>
-            Commencez votre projet en lui donnant le nom de votre application.
-            Choisissez un nom de package approprié pour votre application.
-            Commencez la mise en place d'un projet avec une activité contenant:
-            <ul>
-              <li>menu avec 2 options qui déclenche un Toast</li>
-              <li>utilisation de la classe AppcompatActivity</li>
-              <li>Fragment dans la librairie de support</li>
-            </ul>
-          </p>
-          <p>
-            Créez un Android Virtual Device avec l'API 15 et testez votre application
-          </p>
-        </div>
-        <div class="col-md-12 well">
-          <div>
-            <strong>Exercices de la semaine</strong>
-            <div >
-              <h3>Exercice A</h3>
-              <p>
-                Créez un projet appelé <strong>MultiMulti</strong> contenant 3 activités.
-                Ajoutez un menu d'options dans le ActionBar (révisions) permettant d'accéder à chacune des activités
-                depuis chacune des activités.
-              </p>
-              <h3>Exercice B</h3>
-              <p>
-                Créez un projet appelé <strong>CommunicationsIntra</strong> contenant 1 seule activité.
-                Ajoutez un bouton et un ListFragment (faites une recherche pour un exemple).
-                Ensuite assurez vous de faire communiquer l'activité et le fragment des façons suivantes:
-              </p>
-              <ul>
-                <li>Quand on appuie sur le bouton de l'activité, cela rajoute un élément au début de la liste du ListFragment</li>
-                <li>Quand on appuie sur un élément de la liste, cet élément est communiqué à l'activité</li>
-              </ul>
-              Il est fortement recommandé d'utiliser un bus d'événements (Otto par exemple)
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">S1 : <strong>Programmation mobile</strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
-  </html>
+        <div class="container">
+            <div class="row">
+                <div class="">
+                    <h3 id="s1">Semaine 1 : multiple activités, librairie de support</h3>
+                    <div class="col-md-12 alert alert-danger">
+                        <strong>Évaluations</strong>
+                        <p>
+                            Cette semaine, vous prendrez connaissance de la phase 1 du TP et commencerez votre travail.
+                        </p>
+                    </div>
+                    <div class="col-md-4 alert">
+                        <strong>Avant la séance</strong>
+
+                        <p>
+                            Révisez la programmation Android de base avec la video:
+                        </p>
+                        <p><iframe width="200" height="150" src="https://www.youtube.com/embed/tkSaWvoX4Wo" frameborder="0" allowfullscreen></iframe></p>
+                        <p>
+                            Regardez les videos suivantes:
+                        </p>
+                        <p><iframe width="200" height="150" src="https://www.youtube.com/embed/7dneldqxDKk" frameborder="0" allowfullscreen></iframe></p>
+                        <p><iframe width="200" height="150" src="https://www.youtube.com/embed/768kpYaOZr0" frameborder="0" allowfullscreen></iframe></p>
+
+                    </div>
+                    <div class="col-md-4 alert  alert-warning">
+                        <strong>Séance 1</strong>
+                        <p>
+                            Plan de cours, évaluations et calendrier.
+                        </p>
+                        <p>
+                            Nous discuterons de l'ensemble de l'application et de comment nous allons
+                            procéder.
+                            (identifier l'utilisateur, partager les classes de code communes etc.)
+                        </p>
+
+                        <a href="utils/overview.png"><img src="utils/overview.png" style="width:100%"/></a>
+                        <p>
+                            Nous reviendrons sur la création d'un projet et d'activités comme vu dans les vidéos.
+                        </p>
+                        <p>
+                            Nous passerons à travers les énoncés des 3 phases du projet.
+                        </p>
+                    </div>
+                    <div class="col-md-4 alert alert-info">
+                        <strong>Séance 2</strong>
+                        <p>
+                            Vous pouvez apporter votre ordinateur si vous voulez vérifier votre installation.
+                        </p>
+                        <p>
+                            Vous devrez compléter les exercices de la semaine.
+                        </p>
+                        <p>
+                            Commencez votre projet en lui donnant le nom de votre application.
+                            Choisissez un nom de package approprié pour votre application.
+                            Commencez la mise en place d'un projet avec une activité contenant:
+                        </p>
+                        <ul>
+                            <li>menu avec 2 options qui déclenche un Toast</li>
+                            <li>utilisation de la classe AppcompatActivity</li>
+                            <li>un affichage de liste</li>
+                        </ul>
+                        <p>
+                            Créez un Android Virtual Device avec l'API 15 et testez votre application
+                        </p>
+                    </div>
+                    <div class="col-md-12 well">
+                        <strong>Exercices de la semaine</strong>
+                        <h3>Exercice A</h3>
+                        <p>
+                            Créez un projet appelé <strong>MultiMulti</strong> contenant 3 activités.
+                            Ajoutez un menu d'options dans le ActionBar (révisions) permettant d'accéder à chacune des activités
+                            depuis chacune des activités.
+                        </p>
+                        <h3>Exercice B</h3>
+                        <p>
+                            Créez un projet appelé <strong>CommunicationsIntra</strong> contenant 1 seule activité.
+                            Ajoutez un bouton et une liste (faites une recherche pour un exemple).
+                            Ensuite assurez vous de faire communiquer l'activité et la liste des façons suivantes:
+                        </p>
+                        <ul>
+                            <li>Quand on appuie sur le bouton de l'activité, cela rajoute un élément au début de la liste du ListFragment</li>
+                            <li>Quand on appuie sur un élément de la liste, cet élément est communiqué à l'activité qui affiche un Toast</li>
+                        </ul>
+                        Il est fortement recommandé d'utiliser un bus d'événements (Otto par exemple)
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            </body>
+        </html>
