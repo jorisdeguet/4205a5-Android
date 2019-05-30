@@ -20,7 +20,6 @@
     </head>
 
     <body>
-
         <!-- Fixed navbar -->
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -58,171 +57,161 @@
                         <ul>
                             <li>Définir les activités de votre application</li>
                             <li>Mise en page</li>
-                            <li>Navigation avec Drawer</li>
+                            <li>Navigation avec Drawer/Tiroir</li>
                         </ul>
                     </div>
                     <div class="col-xs-4 alert ">
                         <strong>Interface réseau</strong>
                         <ul>
                             <li>Classes de transfert</li>
-                            <li>Service retrofit2</li>
+                            <li>Service retrofit</li>
                             <li>Fournir une implémentation mock de ce service</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="row ">
-                <div class="">
-                    <div class="col-xs-6 alert ">
-                        <strong>
-                            <span class="label label-success">4 points</span>
-                            Activités et mise en page
-                        </strong>
-                        <p>
-                            Vous devez programmer les activités suivantes au minimum:
-                        </p>
-                        <ul>
-                            <li>Écran de connexion et inscription</li>
-                            <li>Écran d'accueil et d'affichage de liste <strong>personnalisée</strong></li>
-                            <li>Écran de consultation d'un objet en détail</li>
-                            <li>Interface (activité, dialogue etc.) de création d'objet</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-xs-6 alert alert-info">
-                        <strong>Pointage</strong>
-                        <ul>
-                            <li><span class="label label-success">4 points</span> 4 activités existent et sont mises en page</li>
-                        </ul>
-                    </div>
-
+                <div class="col-xs-6 alert ">
+                    <strong>
+                        <span class="label label-success">4 points</span>
+                        Activités et mise en page
+                    </strong>
+                    <p>
+                        Vous devez programmer les activités suivantes au minimum:
+                    </p>
+                    <ul>
+                        <li>Écran de connexion et inscription</li>
+                        <li>Écran d'accueil et d'affichage de liste <strong>personnalisée</strong></li>
+                        <li>Écran de consultation d'un objet en détail</li>
+                        <li>Interface (activité, dialogue etc.) de création d'objet</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="row well">
-                <div class="">
-                    <div class="col-xs-9 alert">
-                        <strong>
-                            <span class="label label-success">4 points</span>
-                            Classes de transfert
-                        </strong>
-                        <p>
-                            Vous devez définir au minimum les classes nécessaires pour tranférer les informations concernant:
-                        </p>
-                        <ul>
-                            <li>l'utilisateur (au moins un identifiant et un mot de passe). Vous pouvez avoir plusieurs classes selon l'interaction (connexion, inscription etc.)</li>
-                            <li>l'entité que vous gérez (selon votre application). Les classes de transfert doivent correspondre au besoin d'affichage ou d'envoi d'information.</li>
-                        </ul>
-                        <p>
-                            Vous devez identifier tous les besoins qui découlent de votre interface graphique. Si le
-                            professeur identifie des informations non représentées ou représentées en double ou inutiles pour l'application, vous perdrez des points.
-                        </p>
-                    </div>
 
-                    <div class="col-xs-3 alert alert-info">
-                        <strong>Pointage</strong>
-                        <ul>
-                            <li><span class="label label-success">2 points</span> classes de transfert pour l'identification </li>
-                            <li><span class="label label-success">2 points</span> classes de transfert pour le reste de l'application </li>
-                        </ul>
-                    </div>
+                <div class="col-xs-6 alert alert-info">
+                    <strong>Pointage</strong>
+                    <ul>
+                        <li><span class="label label-success">4 points</span> 4 activités existent et sont mises en page</li>
+                    </ul>
                 </div>
             </div>
             <div class="row ">
-                <div class="">
-                    <div class="col-xs-9 alert">
-                        <strong>
-                            <span class="label label-success">4 points</span>
-                            Service et Retrofit
-                        </strong>
-                        <p>
-                            Vous devez identifier les différentes actions permises par votre service en fonction des
-                            écrans prévus dans votre application. Chaque bouton ou affichage de données
-                            est a priori un besoin en terme de service sur le serveur.
-                        </p>
-                        <p>
-                            Vous devez atteindre le minimum soit la gestion des utilisateurs (création de compte, connexion
-                            et déconnexion) ainsi que la gestion d'une entité de données (création, récupération d'une liste,
-                            récupération d'une entité).
-                        </p>
-                        <p>
-                            Vous devez déterminer toutes les méthodes qui découlent de votre interface graphique. Si le
-                            professeur identifie des méthodes manquantes, des méthodes inutiles ou des doublons, vous perdrez des points.
-                        </p>
-                    </div>
+                <div class="col-xs-9 alert">
+                    <strong>
+                        <span class="label label-success">4 points</span>
+                        Service et Retrofit
+                    </strong>
+                    <p>
+                        Vous devez identifier les différentes actions permises par votre service en fonction des
+                        écrans prévus dans votre application. Chaque bouton ou affichage de données
+                        est a priori une méthode de service.
+                    </p>
+                    <p>
+                        Vous devez atteindre le minimum soit la gestion des utilisateurs (création de compte, connexion
+                        et déconnexion) ainsi que la gestion d'une entité de données (création, récupération d'une liste,
+                        récupération du détail d'une entité).
+                    </p>
+                    <p>
+                        Vous devez déterminer toutes les méthodes qui découlent de votre interface graphique. Si le
+                        professeur identifie des méthodes manquantes, des méthodes inutiles ou des doublons, vous perdrez des points.
+                    </p>
+                </div>
 
-                    <div class="col-xs-3 alert alert-info">
-                        <strong>Pointage</strong>
-                        <ul>
-                            <li><span class="label label-success">2 points</span> service pour l'identification</li>
-                            <li><span class="label label-success">2 points</span> service pour la gestion de l'entité</li>
-                        </ul>
-                    </div>
+                <div class="col-xs-3 alert alert-info">
+                    <strong>Pointage</strong>
+                    <ul>
+                        <li><span class="label label-success">2 points</span> service pour l'identification</li>
+                        <li><span class="label label-success">2 points</span> service pour la gestion de l'entité</li>
+                    </ul>
+                </div>
+            </div>
+                        <div class="row well">
+                <div class="col-xs-9 alert">
+                    <strong>
+                        <span class="label label-success">4 points</span>
+                        Classes de transfert
+                    </strong>
+                    <p>
+                        En identifiant vos classes de services, vous allez définir naturellement des classes de transfert. Pour chacune de ces classes, vous devez identifier les variables membres nécessaires pour transférer les informations utiles.
+                        Vous devez définir au minimum les classes nécessaires pour tranférer les informations concernant:
+                    </p>
+                    <ul>
+                        <li>l'utilisateur (au moins un identifiant et un mot de passe). Vous pouvez avoir plusieurs classes selon l'interaction (connexion, inscription etc.)</li>
+                        <li>l'entité que vous gérez (selon votre application). Les classes de transfert doivent correspondre au besoin d'affichage ou d'envoi d'information.</li>
+                    </ul>
+                    <p>
+                        Vous devez identifier tous les besoins qui découlent de votre interface graphique. Si le
+                        professeur identifie des informations non représentées ou représentées en double ou inutiles pour l'application, vous perdrez des points.
+                    </p>
+                </div>
+
+                <div class="col-xs-3 alert alert-info">
+                    <strong>Pointage</strong>
+                    <ul>
+                        <li><span class="label label-success">2 points</span> classes de transfert pour l'identification </li>
+                        <li><span class="label label-success">2 points</span> classes de transfert pour le reste de l'application </li>
+                    </ul>
                 </div>
             </div>
             <div class="row well">
-                <div class="">
-                    <div class="col-xs-9 alert">
-                        <strong>
-                            <span class="label label-success">6 points</span>
-                            Mock Retrofit (Prototype fonctionnel sans serveur)
-                        </strong>
-                        <p>
-                            Pour chaque méthode du service retrofit, vous devez fournir une implantation moquée.
-                            Il n'est pas nécessaire que l'information soit cohérente. Les objets retournés doivent
-                            uniquement servir à permettre la démonstration de l'interface. Les méthodes d'identification 
-                            ou de création d'objet peuvent avoir une implémentation moquée qui ne fait rien. 
-                        </p>
-                        <p>
-                            Vous ne devez pas "hardcoder" d'information ailleurs que dans le mock. Chaque endroit dans
-                            le code d'interface qui ne fait pas appel au service (et donc au mock) vous coutera un point.
-                        </p>
-                    </div>
+                <div class="col-xs-9 alert">
+                    <strong>
+                        <span class="label label-success">6 points</span>
+                        Mock Retrofit (Prototype fonctionnel sans serveur)
+                    </strong>
+                    <p>
+                        Pour chaque méthode du service retrofit, vous devez fournir une implantation moquée.
+                        Il n'est pas nécessaire que l'information soit cohérente. Les objets retournés doivent
+                        uniquement servir à permettre la démonstration de l'interface. Les méthodes d'identification 
+                        ou de création d'objet peuvent avoir une implémentation moquée qui ne fait rien. 
+                    </p>
+                    <p>
+                        Vous ne devez pas "hardcoder" d'information ailleurs que dans le mock. Chaque endroit dans
+                        le code d'interface qui ne fait pas appel au service (et donc au mock) vous coutera un point.
+                    </p>
+                </div>
 
-                    <div class="col-xs-3 alert alert-info">
-                        <strong>Pointage</strong>
-                        <ul>
-                            <li><span class="label label-success">2 points</span> le service moqué est implanté</li>
-                            <li><span class="label label-success">4 points</span> Le service est utilisé partout dans l'interface</li>
-                        </ul>
-                    </div>
+                <div class="col-xs-3 alert alert-info">
+                    <strong>Pointage</strong>
+                    <ul>
+                        <li><span class="label label-success">2 points</span> le service moqué est implanté</li>
+                        <li><span class="label label-success">4 points</span> Le service est utilisé partout dans l'interface</li>
+                    </ul>
                 </div>
             </div>
             <div class="row ">
-                <div class="">
-                    <div class="col-xs-9 alert">
-                        <strong>
-                            <span class="label label-success">7 points</span>
-                            Navigation entre activités
-                        </strong>
-                        <p>
-                            Vous devez avoir un tiroir de navigation dans toutes les activités appropriées
-                            (cela n'a pas de sens pour l'écran de connexion par exemple). Le tiroir doit donner
-                            accès à tous les éléments de l'interface appropriés
-                            (au minimum, à l'accueil, à la création d'un item et à la déconnexion).
-                        </p>
-                        <p>
-                            Vous devez vous assurer d'avoir le "hamburger" fonctionnel dans tous les activités avec tiroir.
-                        </p>
-                        <p>
-                            Vous devez faire une mise en page personnalisée (qui indique l'identifiant de l'utilisateur) pour
-                            l'en-tête du tiroir (drawer header).
-                        </p>
-                        <p>
-                            Vous devez vous assurer d'implanter les autres possiblités de navigation.
-                            Par exemple, quand un utilisateur se connecte, aller à l'écran d'accueil, quand
-                            l'utilisateur, sélectionne un item dans une liste aller à l'écran de détail, retourner
-                            à la liste après la création d'un objet etc.
-                        </p>
-                    </div>
-                    <div class="col-xs-3 alert alert-info">
-                        <strong>Pointage</strong>
-                        <ul>
-                            <li><span class="label label-success">3 points</span> le tiroir est fonctionnel dans toutes les activités et donne accès à toute l'interface</li>
-                            <li><span class="label label-success">1 point</span> tiroir : hamburger fonctionnel dans toutes les activités</li>
-                            <li><span class="label label-success">1 point</span> tiroir : drawer header personnalisé</li>
-                            <li><span class="label label-success">2 points</span> toutes autres navigations fonctionnelles</li>
-                        </ul>
-                    </div>
+                <div class="col-xs-9 alert">
+                    <strong>
+                        <span class="label label-success">7 points</span>
+                        Navigation entre activités
+                    </strong>
+                    <p>
+                        Vous devez avoir un tiroir de navigation dans toutes les activités appropriées
+                        (cela n'a pas de sens pour l'écran de connexion par exemple). Le tiroir doit donner
+                        accès à tous les éléments de l'interface appropriés
+                        (au minimum, à l'accueil, à la création d'un item et à la déconnexion).
+                    </p>
+                    <p>
+                        Vous devez vous assurer d'avoir le "hamburger" fonctionnel dans tous les activités avec tiroir.
+                    </p>
+                    <p>
+                        Vous devez faire une mise en page personnalisée (qui indique l'identifiant de l'utilisateur) pour
+                        l'en-tête du tiroir (drawer header).
+                    </p>
+                    <p>
+                        Vous devez vous assurer d'implanter les autres possiblités de navigation.
+                        Par exemple, quand un utilisateur se connecte, aller à l'écran d'accueil, quand
+                        l'utilisateur, sélectionne un item dans une liste aller à l'écran de détail, retourner
+                        à la liste après la création d'un objet etc.
+                    </p>
+                </div>
+                <div class="col-xs-3 alert alert-info">
+                    <strong>Pointage</strong>
+                    <ul>
+                        <li><span class="label label-success">3 points</span> le tiroir est fonctionnel dans toutes les activités et donne accès à toute l'interface</li>
+                        <li><span class="label label-success">1 point</span> tiroir : hamburger fonctionnel dans toutes les activités</li>
+                        <li><span class="label label-success">1 point</span> tiroir : drawer header personnalisé</li>
+                        <li><span class="label label-success">2 points</span> toutes autres navigations fonctionnelles</li>
+                    </ul>
                 </div>
             </div>
         </div>

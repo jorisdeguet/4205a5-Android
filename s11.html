@@ -1,113 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="page du cours programmation mobile">
-  <meta name="author" content="Département informatique, collège Édouard Montpetit">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="page du cours programmation mobile">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
 
-  <title>Programmation mobile</title>
+        <title>Programmation mobile</title>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-  <style>
-  body {
-    padding-top: 70px;
-  }
-  </style>
-</head>
-<body>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <!-- Fixed navbar -->
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">S11 : <strong>Programmation mobile</strong></a>
-      </div>
-      <div class="navbar-collapse collapse navbar-right">
-        <ul class="nav navbar-nav">
-            <li><a href="index.html">Accueil</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+    <body>
 
-  <div class="container">
-
-
-    <div class="row">
-      <div class="">
-        <h3 id="s11">Semaine 11 : interface graphique et attente</h3>
-        <div class="col-md-4 alert alert-success">
-          <strong>Avant la séance (2h)</strong>
-          <p>
-            Vous devrez regarder l'exemple d'application fournie pour les indicateurs de progression
-              <a class="btn btn-xs btn-primary" href="https://github.com/jorisdeguet/4205a5-Android/tree/master/code/Progress">ici</a>.
-          </p>
-		  <p>
-			Regardez l'exemple de Google concernant les listes avec 
-			<a href="https://developer.android.com/training/swipe/add-swipe-interface">swipe to refresh</a>
-			<a class="btn btn-xs btn-primary" href="https://github.com/googlesamples/android-SwipeRefreshListFragment/">ici</a>.
-			Vous pouvez le lancer dans Android Studio, aller à 
-			<span class="label label-primary">File</span>  > 
-              <span class="label label-primary">New</span>  > 
-			<span class="label label-primary">Import sample</span> et taper "swipe" dans le champ de recherche.
-		  </p>
-        </div>
-        <div class="col-md-4 alert alert-warning">
-          <strong>Pendant la séance en classe</strong>
-          <p>
-			On discutera du besoin d'indiquer à l'utilisateur qu'un accès réseau est en cours pour éviter de la frustration et le fait que l'utilisateur envoie plusieurs fois une même requête.
-          </p>
-          <p>
-			On regardera le code des exemples en cours. En particulier, on prendra l'exemple de Google et on le simplifiera pour identifier les éléments importants pour un swipe to refresh.
-          </p>
-        </div>
-        <div class="col-md-4 alert alert-info">
-          <strong>Pendant la séance de laboratoire</strong>
-          <p>
-			Vous devez finir les exercices et avancer votre projet.
-          </p>
-        </div>
-        <div class="col-md-12 well">
-          <div>
-            <a class="btn btn-primary btn-xs">
-              Exercices de la semaine
-            </a>
-            <div >
-              <h3>Exercice A</h3>
-              <p>
-                Créez un projet appelé <strong>AttenteSimple</strong> avec un
-                bouton et un textview avec un fond vert.
-              </p>
-              <p>
-                Faites la programmation nécessaire pour que quand on appuie sur le bouton,
-                le textview soit remplacé par un indicateur de progression pendant une seconde puis que le textview revienne.
-              </p>
-              <h3>Exercice B</h3>
-              <p>
-                Créez un projet appelé <strong>AttenteListe</strong>.
-              </p>
-              <p>
-                Implantez un "tirer pour rafraichir" et modifier le contenu de la liste
-                à chaque fois avec un ensemble de 100 nombres entiers tirés au hasard entre
-                333 et 444.
-              </p>
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">S11 : <strong>Programmation mobile</strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
-  </html>
+        <div class="container">
+            <div class="row">
+                <h3>Interface graphique et attente</h3>
+                <div class="col-md-4 alert alert-success">
+                    <strong>Avant la séance (2h)</strong>
+                    <p>
+                        Vous devrez regarder l'exemple d'application fournie pour les indicateurs de progression
+                        <a class="btn btn-xs btn-primary" href="https://github.com/jorisdeguet/4205a5-Android/tree/master/code/Progress">ici</a>.
+                    </p>
+                    <p>
+                        Regardez l'exemple de Google concernant les listes avec 
+                        <a href="https://developer.android.com/training/swipe/add-swipe-interface">swipe to refresh</a>
+                        <a class="btn btn-xs btn-primary" href="https://github.com/googlesamples/android-SwipeRefreshListFragment/">ici</a>.
+                        Vous pouvez le lancer dans Android Studio, aller à 
+                        <span class="label label-primary">File</span>  > 
+                        <span class="label label-primary">New</span>  > 
+                        <span class="label label-primary">Import sample</span> et taper "swipe" dans le champ de recherche.
+                    </p>
+                </div>
+                <div class="col-md-4 alert alert-warning">
+                    <strong>Pendant la séance en classe</strong>
+                    <p>
+                        On discutera du besoin d'indiquer à l'utilisateur qu'un accès réseau est en cours pour éviter de la frustration et le fait que l'utilisateur envoie plusieurs fois une même requête.
+                    </p>
+                    <p>
+                        On discutera les besoins d'avoir une action de rafraîchissement, en particulier si les informations d'une page peuvent être modifiées par un tiers.
+                    </p>
+                    <p>
+                        On regardera le code des exemples en cours. En particulier, on prendra l'exemple de Google et on le simplifiera pour identifier les éléments importants pour un swipe to refresh.
+                    </p>
+                </div>
+                <div class="col-md-4 alert alert-info">
+                    <strong>Pendant la séance de laboratoire</strong>
+                    <p>
+                        Vous devez finir les exercices et avancer votre projet.
+                    </p>
+                </div>
+                <div class="col-md-12 well">
+                    <div>
+                        <a class="btn btn-primary btn-xs">
+                            Exercices de la semaine
+                        </a>
+                        <div >
+                            <h3>Exercice A</h3>
+                            <p>
+                                Créez un projet appelé <strong>AttenteSimple</strong> avec un
+                                bouton et un textview avec un fond vert.
+                            </p>
+                            <p>
+                                Faites la programmation nécessaire pour que quand on appuie sur le bouton,
+                                le textview soit remplacé par un indicateur de progression pendant une seconde puis que le textview revienne.
+                            </p>
+                            <h3>Exercice B</h3>
+                            <p>
+                                Créez un projet appelé <strong>AttenteListe</strong>.
+                            </p>
+                            <p>
+                                Implantez un "tirer pour rafraichir" et modifier le contenu de la liste
+                                à chaque fois avec un ensemble de 100 nombres entiers tirés au hasard entre
+                                333 et 444.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
