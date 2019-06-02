@@ -1,128 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="page du cours programmation mobile">
-  <meta name="author" content="Département informatique, collège Édouard Montpetit">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="page du cours programmation mobile">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
 
-  <title>Programmation mobile</title>
+        <title>Programmation mobile</title>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-  <style>
-  body {
-    padding-top: 70px;
-  }
-  </style>
-</head>
-<body>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <!-- Fixed navbar -->
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">S8 : <strong>Programmation mobile</strong></a>
-      </div>
-      <div class="navbar-collapse collapse navbar-right">
-        <ul class="nav navbar-nav">
-            <li><a href="index.html">Accueil</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+    <body>
 
-  <div class="container">
-
-
-    <div class="row">
-      <div class="">
-        <h3 id="s8">JSON, Gson et structure du projet</h3>
-        <div class="col-md-4 alert alert-success">
-          <strong>Avant la séance (2h)</strong>
-          <p>
-            Voir l'exemple de sérialisation Gson modifiée ici
-            <a class="btn btn-xs btn-primary" href="https://github.com/jorisdeguet/4205a5-Android/tree/master/code/gson-custom">Gson custom</a>.
-          </p>
-          <p>
-            Regardez également la
-            <a class="btn btn-xs btn-primary" href="https://github.com/google/gson/blob/master/UserGuide.md#TOC-Custom-Serialization-and-Deserialization">doc de Gson</a>.
-          </p>
-          <p>
-            Côté client, vous devez faire une recherche sur comment passer un Gson modifié à Retrofit.
-          </p>
-          <p>
-            Côté client, vous devez faire une recherche sur comment passer un Gson modifié à Jersey.
-          </p>
-        </div>
-        <div class="col-md-4 alert alert-warning">
-          <strong>Séance 1</strong>
-          <p>
-            On fera une capsule sur la structure de votre projet pour permettre de partager entre
-            le serveur et le client les classes suivantes:
-          </p>
-          <ul>
-            <li>classes de modèle</li>
-            <li>classes de transfert</li>
-            <li>sérialisation modifiée si nécessaire</li>
-          </ul>
-          <p>
-            Nous verrons comment utiliser Maven pour installer un projet (une librairie) localement et
-            l'utiliser dans un autre projet.
-          </p>
-          <p>
-            Nous verrons comment intégrer le repository local de Maven dans un projet Gradle et comment
-            établir une dépendance vers notre librairie locale partagée.
-          </p>
-        </div>
-        <div class="col-md-4 alert alert-info">
-          <strong>Séance 2</strong>
-          <p>
-            Vous devrez implanter la structure globale de votre projet incluant votre
-            application Android, votre serveur Java et éventuellement une librairie de
-            classes communes.
-          </p>
-        </div>
-        <div class="col-md-12 well">
-          <div>
-            <a class="btn btn-primary btn-xs" >
-              Exercices de la semaine
-            </a>
-            <div >
-              <h3>Exercice A</h3>
-              <p>
-                Créez dans un projet <strong>GsonDateTime</strong> un Gson modifié permettant de (dé)sérialiser un DateTime en le
-                représentant comme le nombre de millisecondes depuis l'EPOCH.
-                Vous devez également vous assurer que le <em>pretty printing</em>
-                est activé.
-                Codez les tests unitaires permettant de valider le fonctionnement.
-              </p>
-              <h3>Exercice B</h3>
-              <p>
-                Créez dans un projet <strong>GsonUser</strong>.
-                Essayez de sérialiser avec Gson une classe User qui contient un champ
-                <pre>
-class User {
-  List&lt;User&gt; friends;
-}
-                </pre>
-                Faites plusieurs tests pour valider le fonctionnement. Essayez de trouver
-                un cas problématique.
-              </p>
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">S8 : <strong>Programmation mobile</strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
-  </html>
+
+        <div class="container">
+            <div class="row">
+                <h3 id="s8">Seb serveur, structure du projet et GSON</h3>
+                <div class="col-md-4 alert alert-success">
+                    <strong>Avant la séance (2h)</strong>
+                    <br>
+                    <iframe width="200" height="113" src="https://www.youtube.com/embed/r3m6_tl86TM?list=PLYHAgLf_cnWSzWuVuasFEe-z_ViOpkMfV" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="200" height="113" src="https://www.youtube.com/embed/UWSkH3ngrfI?list=PLYHAgLf_cnWSzWuVuasFEe-z_ViOpkMfV" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="200" height="113" src="https://www.youtube.com/embed/AhV_5Mg5ynE?list=PLYHAgLf_cnWSzWuVuasFEe-z_ViOpkMfV" frameborder="0" allowfullscreen></iframe>
+
+                    <p>
+                        Regardez également la
+                        <a class="btn btn-xs btn-primary" href="https://github.com/google/gson/blob/master/UserGuide.md#TOC-Custom-Serialization-and-Deserialization">doc de Gson</a>.
+                    </p>
+
+                </div>
+                <div class="col-md-4 alert alert-warning">
+                    <strong>Web service côté serveur</strong>
+                    <p>
+                        Je montrerai également comment utiliser POSTMAN pour tester le serveur.
+                    </p>
+                    <p>
+                        Le but ici de mettre en place la base de votre serveur applicatif.
+                        Pour chaque méthode de service identifiée dans votre client, il faudra
+                        un web service sur notre serveur.
+                    </p>
+                    <p>
+                        On fera une capsule sur la structure de votre projet pour permettre de partager entre
+                        le serveur et le client les classes suivantes:
+                    </p>
+                    <ul>
+                        <li>classes de modèle</li>
+                        <li>classes de transfert</li>
+                        <li>sérialisation modifiée si nécessaire</li>
+                    </ul>
+                    <p>
+                        Nous verrons comment utiliser Maven pour installer un projet (une librairie) localement et
+                        l'utiliser dans un autre projet. Nous verrons comment intégrer le repository local de Maven dans un projet Gradle et comment
+                        établir une dépendance vers notre librairie locale partagée.
+                    </p>
+                </div>
+                <div class="col-md-4 alert alert-info">
+                    <strong>Séance 2</strong>
+                    <p>
+                        Voir l'exemple de sérialisation Gson modifiée ici
+                        <a class="btn btn-xs btn-primary" href="https://github.com/jorisdeguet/4205a5-Android/tree/master/code/gson-custom">Gson custom</a>.
+                    </p>
+                    <p>
+                        Démos de:
+                    </p>
+                    <ul>
+                        <li>Côté client, comment passer un Gson modifié à Retrofit.</li>
+                        <li>Côté serveur, comment passer un Gson modifié à Jersey.</li>
+                    </ul>
+                    <p>
+                        Vous devrez implanter la structure globale de votre projet incluant votre
+                        application Android, votre serveur Java et éventuellement une librairie de
+                        classes communes.
+                    </p>
+                </div>
+                <div class="col-md-12 well">
+                    <div>
+                        <a class="btn btn-primary btn-xs" >
+                            Exercices de la semaine
+                        </a>
+                        <div >
+                            <h3>Exercice A</h3>
+                            <p>
+                                Vous devez créez un projet serveur (sur le port 7878) appelé <strong>Fibonacci</strong> qui prend en paramètre
+                                un entier dans le chemin "/api/fibo/123" et qui renvoie la suite de Fibonacci jusqu'au paramètre.
+                            </p>
+                            <p>
+                                Vous devez renvoyer une liste d'entier au format JSON.
+                            </p>
+                            <h3>Exercice B</h3>
+                            <p>
+                                Vous devez déployer le serveur programmé précédemment sur le serveur avec votre propre numéro de port.
+                            </p>
+                            <h3>Exercice C</h3>
+                            <p>
+                                Créez dans un projet <strong>GsonDateTime</strong> un Gson modifié permettant de (dé)sérialiser un DateTime en le
+                                représentant comme le nombre de millisecondes depuis l'EPOCH.
+                                Vous devez également vous assurer que le <em>pretty printing</em>
+                                est activé.
+                                Codez les tests unitaires permettant de valider le fonctionnement.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
