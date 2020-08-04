@@ -1,6 +1,6 @@
 package org.deguet.httpsandroid;
 
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 import android.test.AndroidTestCase;
 import android.util.Log;
 
